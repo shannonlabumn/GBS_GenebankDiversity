@@ -1,0 +1,9 @@
+
+
+The following script was used to calculate Dstatistics with the following files:
+The vcf_file was generated in polyrad
+SETS_5 is to test for introgression from adg into tbr
+SETS_6 is to test for reciprocal introgression (tbr into adg)
+We used a newick tree to keep tree associations
+
+./Dsuite Dtrios -t tree.nwk new_vcf_file_for_diptet_D_calc.vcf SETS_x.txt

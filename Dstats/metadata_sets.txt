@@ -1,0 +1,608 @@
+populations.8,full,Id,Bamberg,species,CLONE,continent,region,status
+1,AV_10_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_10,4,tbr,EARLY GEM,North America,US,cultivated
+1,AV_11_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_11,4,tbr,EARLY OHIO,North America,US,cultivated
+1,AV_12_S62_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_12,4,tbr,EARLY ROSE,North America,US,cultivated
+1,AV_15_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_15,4,tbr,GARNET CHILI,North America,US,cultivated
+1,AV_16_S91_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_16,4,tbr,GREEN MOUNTAIN,North America,US,cultivated
+1,AV_17_S49_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_17,4,tbr,IRISH COBBLER,North America,US,cultivated
+1,AV18_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV18,4,tbr,KATAHDIN,North America,US,cultivated
+1,AV_19_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_19,4,tbr,KENNEBEC,North America,US,cultivated
+1,AV_1_S46_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_1,4,tbr,ALASKA FROSTLESS,North America,US,cultivated
+1,AV_20_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_20,4,tbr,LEMHI RUSSET,North America,US,cultivated
+1,AV21_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV21,4,tbr,LENAPE,North America,US,cultivated
+1,AV_23_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_23,4,tbr,NORGOLD RUSSET,North America,US,cultivated
+1,AV_24_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_24,4,tbr,NORLAND,North America,US,cultivated
+1,AV_25_S75_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_25,4,tbr,ONTARIO,North America,US,cultivated
+1,AV_26_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_26,4,tbr,OZETTE,North America,US,cultivated
+1,AV27_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV27,4,tbr,RED PONTIAC,North America,US,cultivated
+1,AV2_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV2,4,tbr,ATLANTIC,North America,US,cultivated
+1,AV_32_S51_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_32,4,tbr,SACO,North America,US,cultivated
+1,AV33_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV33,4,tbr,SEBAGO,North America,US,cultivated
+1,AV_35_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_35,4,tbr,SNOWDRIFT,North America,US,cultivated
+1,AV_37_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_37,4,tbr,TRIUMPH,North America,US,cultivated
+1,AV_39_S74_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_39,4,tbr,WHITE ROSE,North America,US,cultivated
+1,AV_3_S85_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_3,4,tbr,BAKE-KING,North America,US,cultivated
+1,AV_40_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_40,4,tbr,BURBANK,North America,US,cultivated
+1,AV_42_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_42,4,tbr,EARLY BLUE,North America,US,cultivated
+1,AV48_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV48,4,tbr,MONONA,North America,US,cultivated
+1,AV_49_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_49,4,tbr,RUSSET NORKOTAH,North America,US,cultivated
+1,AV_4_S69_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_4,4,tbr,BELRUS,North America,US,cultivated
+1,AV_50_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_50,4,tbr,ALLEGANY,North America,US,cultivated
+1,AV_51_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_51,4,tbr,SAGINAW GOLD,North America,US,cultivated
+1,AV53_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV53,4,tbr,RANGER RUSSET,North America,US,cultivated
+1,AV54_S8_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV54,4,tbr,CALWHITE,North America,US,cultivated
+1,AV56_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV56,4,tbr,CHIPETA,North America,US,cultivated
+1,AV_57_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_57,4,tbr,FRONTIER RUSSET,North America,US,cultivated
+1,AV_58_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_58,4,tbr,GEMCHIP,North America,US,cultivated
+1,AV5_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV5,4,tbr,BISON,North America,US,cultivated
+1,AV_60_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_60,4,tbr,SANGRE,North America,US,cultivated
+1,AV_61_S59_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_61,4,tbr,PUNGO,North America,US,cultivated
+1,AV_62_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_62,4,tbr,KRANTZ,North America,US,cultivated
+1,AV_64_S59_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_64,4,tbr,RUSSET NUGGET,North America,US,cultivated
+1,AV_65_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_65,4,tbr,LA ROUGE,North America,US,cultivated
+1,AV_66_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_66,4,tbr,AMEY,North America,US,cultivated
+1,AV_67_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_67,4,tbr,HARLEY BLACKWELL,North America,US,cultivated
+1,AV_68_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_68,4,tbr,PETER WILCOX,North America,US,cultivated
+1,AV_7_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_7,4,tbr,BUTTE,North America,US,cultivated
+1,AV_8_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV_8,4,tbr,DAZOC,North America,US,cultivated
+1,AV9_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,AV9,4,tbr,DENALI,North America,US,cultivated
+16,BAO002_S54_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619144,2,stn,PIRAMPO,South American ,peru,landrace
+4,BAO005_S72_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595461,4,tbr,CON 931,South American ,chile,cultivated
+8,BAO007_S84_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619145,4,tbradg,TARMELINA,South American ,peru,landrace
+11,BAO008_S90_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619148,4,tbradg,CORAZON ROSADO,South American ,argentina,landrace
+11,BAO009_S49_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607497,4,tbradg,PAPA CHONCA,South American ,chile,landrace
+20,BAO011_S61_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI584994,2,phu,IVP101,europe,netherlands,genetic material
+10,BAO013_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607472,4,tbradg,KHUCHI AKITA,South American ,bolivia,landrace
+20,BAO014_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607501,4,tbr,C89.315,South American ,peru,genetic material
+20,BAO017_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI491544,4,tbr,DTO-02,South American ,peru,genetic material
+8,BAO018_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607498,4,tbradg,RUNTU HUAYRO,South American ,peru,landrace
+8,BAO019_S62_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607495,4,tbradg,CHAUCHA AMARILLA,South American ,peru,landrace
+8,BAO020_S68_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619146,4,tbradg,PAQOCHA O MURU URENA,South American ,peru,landrace
+20,BAO021_S74_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607500,4,tbr,C91.640,South American ,peru,genetic material
+8,BAO022_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619147,4,tbradg,WACAPA NAGUIN,South American ,peru,landrace
+2,BAO023_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619135,4,tbr,YANA,South American ,peru,cultivated
+5,BAO024_S92_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619136,4,tbr,CRUZA 148,North America,mexico,cultivated
+8,BAO025_S51_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619140,4,tbradg,SANATANLALLA,South American ,peru,landrace
+20,BAO027_S63_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607499,4,tbr,C91.612,South American ,peru,genetic material
+19,BAO028_S69_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI599280,2,ajh,JANCKO_AJAWIRI,South American ,bolivia,landrace
+10,BAO031_S87_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595444,4,tbradg,QOYLLU,South American ,bolivia,landrace
+8,BAO032_S93_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619141,4,tbradg,HUAGALINA,South American ,peru,landrace
+8,BAO035_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619142,4,tbradg,BADULAQUE,South American ,peru,landrace
+8,BAO036_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619137,4,tbradg,SA-450,South American ,peru,landrace
+4,BAO038_S82_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245800,4,tbr,MUCANA - COR C.60,South American ,chile,landrace
+11,BAO039_S88_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI660359,4,tbradg,NEGRA OJOSA,South American ,argentina,landrace
+8,BAO044_S71_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI658587,4,tbradg,GUINCHO NEGRA,South American ,peru,landrace
+8,BAO045_S77_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI653761,4,tbradg,YANA HUALASH,South American ,peru,landrace
+8,BAO046_S83_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI660357,4,tbradg,SULLU,South American ,peru,landrace
+2,BAO048_S95_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619158,4,tbr,V-3,South American ,peru,cultivated
+20,BAO_049_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI665046,4,tbr,9H27-2,asia,japan,cultivated
+2,BAO_051_S60_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI645563,4,tbr,CASA BLANCA,South American ,peru,landrace
+14,BAO_052_S66_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595438,2,juz,AZUL LUK'I,South American ,bolivia,landrace
+8,BAO_053_S72_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642181,4,tbradg,YURACC CCOMPIS,South American ,peru,landrace
+8,BAO_054_S78_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642182,4,tbradg,YANA MACUCO,South American ,peru,landrace
+8,BAO_056_S89_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642184,4,tbradg,SUYTU VILQUINA,South American ,peru,landrace
+8,BAO_057_S49_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642185,4,tbradg,GAYNA,South American ,peru,landrace
+8,BAO_058_S55_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642186,4,tbradg,YUGUIMA,South American ,peru,landrace
+8,BAO_059_S61_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642187,4,tbradg,PACIENCIA,South American ,peru,landrace
+20,BAO_061_S67_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642189,4,tbradg,RUBI,South American ,Colombia,landrace
+8,BAO_062_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642438,4,tbradg,ALCCA IMILLA,South American ,peru,landrace
+8,BAO_063_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642439,4,tbradg,CANASTA,South American ,peru,landrace
+8,BAO_064_S85_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642440,4,tbradg,GARHUASH SUITO,South American ,peru,landrace
+8,BAO_065_S90_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642441,4,tbradg,HUICHIRI,South American ,peru,landrace
+8,BAO_066_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642444,4,tbradg,PUCA TROMBOS,South American ,peru,landrace
+8,BAO_067_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642446,4,tbradg,OKELLA QUEHUILLO,South American ,peru,landrace
+8,BAO_069_S68_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI662324,4,tbradg,LLUNCHUYWAQACHI,South American ,peru,landrace
+8,BAO_071_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI664474,4,tbradg,YANAMATA,South American ,peru,landrace
+8,BAO_072_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI664475,4,tbradg,CHIQUILLA PITIQUINA,South American ,peru,landrace
+9,BAO_074_S51_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI664477,4,tbradg,LEONA - OCH 7009,South American ,ecuador,landrace
+10,BAO_075_S57_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI669829,4,tbradg,HUAYCU,South American ,bolivia,landrace
+14,BAO_082_S52_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI631201,2,juz,VIR 9742,South American ,NA,cultivated
+8,BAO_084_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195213,4,tbradg,CPC 1490,South American ,peru,cultivated
+12,BAO_085_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI205524,4,tbradg,CPC 2359X2355,South American ,colombia,cultivated
+10,BAO_086_S76_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230586,4,tbradg,GND s.n.,South American ,bolivia,cultivated
+8,BAO_088_S88_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214421,4,tbradg,SMI 448,South American ,peru,cultivated
+8,BAO_089_S93_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214437,4,tbradg,SMI 499,South American ,peru,cultivated
+9,BAO_090_S53_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI229895,4,tbradg,OCH 2117,South American ,ecuador,cultivated
+10,BAO_091_S59_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI258867,4,tbradg,CAR 21,South American ,bolivia,cultivated
+10,BAO_092_S65_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI258891,4,tbradg,CAR 305,South American ,bolivia,cultivated
+10,BAO_093_S71_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI258921,4,tbradg,CAR 163,South American ,bolivia,cultivated
+10,BAO_094_S77_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI258934,4,tbradg,CAR 113,South American ,bolivia,cultivated
+8,BAO_095_S83_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246554,4,tbradg,COR P.256,South American ,peru,cultivated
+8,BAO_096_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214435,4,tbradg,SMI 465,South American ,peru,cultivated
+8,BAO_098_S13_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245783,4,tbradg,COR C.43,South American ,peru,cultivated
+20,BAO_100_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245316,4,tbradg,COR C.7,North America,US,cultivated
+11,BAO_101_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245321,4,tbradg,COR C.12,South American ,chile,cultivated
+4,BAO_102_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245845,4,tbr,COR C.105,South American ,chile,cultivated
+4,BAO_103_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245795,4,tbr,COR C.55,South American ,chile,cultivated
+8,BAO_104_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246547,4,tbradg,COR P.249,South American ,peru,cultivated
+8,BAO_105_S8_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292074,4,tbradg,UGN 5243,South American ,peru,cultivated
+8,BAO_106_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292075,4,tbradg,UGN 5244,South American ,peru,cultivated
+9,BAO_107_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI296104,4,tbradg,CEP 45,South American ,ecuador,cultivated
+8,BAO_109_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292084,4,tbradg,UGN 5307,South American ,peru,cultivated
+8,BAO_111_S44_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214427,4,tbradg,SMI 454,South American ,peru,cultivated
+8,BAO_112_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292088,4,tbradg,UGN 5381,South American ,peru,cultivated
+8,BAO_113_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292101,4,tbradg,UGN 5532,South American ,peru,cultivated
+10,BAO_114_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292132,4,tbradg,UGN 5233,South American ,bolivia,cultivated
+20,BAO_116_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI566801,4,tbradg,HOF 1654,South American ,Argentina,cultivated
+4,BAO_117_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245816,4,tbr,COR C.76,South American ,Chile,cultivated
+8,BAO_118_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281049,4,tbradg,WAC 173,South American ,peru,cultivated
+8,BAO_119_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281086,4,tbradg,WAC 268,South American ,peru,cultivated
+8,BAO_121_S10_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI186178,4,tbradg,OCH s.n.,South American ,peru,cultivated
+8,BAO_122_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI186179,4,tbradg,OCH s.n.,South American ,peru,cultivated
+8,BAO_123_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI186180,4,tbradg,OCH s.n.,South American ,peru,cultivated
+8,BAO_124_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195162,4,tbradg,CPC 300,South American ,peru,cultivated
+16,BAO_125_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195188,2,stn,CPC 1514,South American ,peru,cultivated
+15,BAO_126_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195191,2,phu,CPC 836.1,South American ,ecuador,cultivated
+15,BAO_127_S46_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195198,2,phu,CPC 979,South American ,Colombia,cultivated
+16,BAO_128_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195204,2,stn,CPC 712,South American ,peru,cultivated
+17,BAO_129_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195206,2,ber,CPC 1727.3,South American ,bolivia,cultivated
+16,BAO_130_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI195214,2,stn,CPC 1793,South American ,peru,cultivated
+16,BAO_132_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI205526,2,stn,CPC 1839,South American ,peru,cultivated
+16,BAO_133_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI205527,2,stn,CPC 1782,South American ,peru,cultivated
+12,BAO_134_S41_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI205622,4,tbradg,CPC 2201 (30),South American ,colombia,cultivated
+10,BAO_135_S47_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI205623,4,tbradg,CPC 1673 X 2201,South American ,bolivia,cultivated
+8,BAO_136_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI205624,4,tbradg,CPC 2201 (85),South American ,peru,cultivated
+8,BAO_140_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214425,4,tbradg,SMI 452,South American ,peru,cultivated
+8,BAO_141_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214426,4,tbradg,SMI 453,South American ,peru,cultivated
+8,BAO_142_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214429,4,tbradg,SMI 459,South American ,peru,cultivated
+8,BAO_143_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214430,4,tbradg,SMI 460,South American ,peru,cultivated
+8,BAO_144_S49_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214434,4,tbradg,SMI 464,South American ,peru,cultivated
+8,BAO_145_S55_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214436,4,tbradg,SMI 466,South American ,peru,cultivated
+8,BAO_146_S61_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214441,4,tbradg,SMI 503,South American ,peru,cultivated
+8,BAO_147_S67_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214442,4,tbradg,SMI 504,South American ,peru,cultivated
+8,BAO_148_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI214443,4,tbradg,SMI 505,South American ,peru,cultivated
+12,BAO_149_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225635,4,tbradg,CCC 427,South American ,venezuela,cultivated
+15,BAO_150_S85_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225669,2,phu,CCC 118,South American ,colombia,cultivated
+15,BAO_151_S91_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225670,2,phu,CCC 180,South American ,colombia,cultivated
+15,BAO_152_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225671,2,phu,CCC 135,South American ,colombia,cultivated
+15,BAO_153_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225673,2,phu,CCC 178,South American ,colombia,cultivated
+15,BAO_154_S62_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225675,2,phu,CCC 131,South American ,colombia,cultivated
+15,BAO_155_S68_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225677,2,phu,CCC 181,South American ,colombia,cultivated
+15,BAO_156_S74_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225678,2,phu,CCC 173,South American ,colombia,cultivated
+15,BAO_157_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225682,2,phu,CCC 193,South American ,colombia,cultivated
+15,BAO_158_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225685,2,phu,CCC 188,South American ,colombia,cultivated
+15,BAO_159_S92_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI225707,2,phu,CCC 81,South American ,colombia,cultivated
+8,BAO_161_S57_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230457,4,tbradg,CPC 1464,South American ,peru,cultivated
+9,BAO_162_S63_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230470,4,tbradg,IICA 3319,South American ,ecuador,cultivated
+9,BAO_163_S69_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230471,4,tbradg,IICA 3320,South American ,ecuador,cultivated
+8,BAO_164_S75_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230496,4,tbradg,OCH 808,South American ,peru,cultivated
+8,BAO_165_S81_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230497,4,tbradg,OCH 816,South American ,peru,cultivated
+8,BAO_166_S87_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230498,4,tbradg,OCH 868,South American ,peru,cultivated
+8,BAO_167_S93_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230499,4,tbradg,OCH 1226,South American ,peru,cultivated
+8,BAO_168_S52_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230500,4,tbradg,OCH 1245,South American ,peru,cultivated
+16,BAO_169_S58_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230512,2,stn,OCH 1922,South American ,peru,cultivated
+16,BAO_170_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI230513,2,stn,OCH 1933,South American ,peru,cultivated
+8,BAO_171_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI232036,4,tbradg,EELM 1,South American ,peru,cultivated
+8,BAO_173_S82_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI232840,4,tbradg,EELM s.n.,South American ,peru,cultivated
+8,BAO_174_S88_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI232841,4,tbradg,EELM s.n.,South American ,peru,cultivated
+8,BAO_175_S94_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI232842,4,tbradg,EELM s.n.,South American ,peru,cultivated
+3,BAO_176_S53_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI234004,4,tbr,GND 28,South American ,bolivia,cultivated
+9,BAO_177_S59_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI237208,4,tbradg,DIA 5,South American ,ecudor,cultivated
+12,BAO_178_S65_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243360,4,tbradg,CCC 2,South American ,colombia,cultivated
+12,BAO_179_S71_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243366,4,tbradg,CCC 27,South American ,colombia,cultivated
+12,BAO_180_S77_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243396,4,tbradg,CCC 162,South American ,colombia,cultivated
+9,BAO_181_S83_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243399,4,tbradg,CCC 194,South American ,ecuador,cultivated
+9,BAO_182_S89_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243400,4,tbradg,CCC 196,South American ,ecuador,cultivated
+9,BAO_183_S95_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243401,4,tbradg,CCC 198,South American ,ecuador,cultivated
+9,BAO_184_S54_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243402,4,tbradg,CCC 199,South American ,ecuador,cultivated
+9,BAO_185_S60_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243403,4,tbradg,CCC 201,South American ,ecuador,cultivated
+9,BAO_186_S90_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243404,4,tbradg,CCC 203,South American ,ecuador,cultivated
+9,BAO_189_S84_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243407,4,tbradg,CCC 208,South American ,ecuador,cultivated
+9,BAO_191_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243409,4,tbradg,CCC 210,South American ,ecuador,cultivated
+9,BAO_192_S13_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243410,4,tbradg,CCC 214,South American ,ecuador,cultivated
+12,BAO_194_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243415,4,tbradg,CCC 249,South American ,colombia,cultivated
+12,BAO_195_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243421,4,tbradg,CCC 269,South American ,colombia,cultivated
+12,BAO_196_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243435,4,tbradg,CCC 404 ,South American ,colombia,cultivated
+12,BAO_197_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243438,4,tbradg,CCC 425,South American ,venezuela,cultivated
+15,BAO_198_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243468,2,phu,CCC 299,South American ,colombia,cultivated
+15,BAO_199_S8_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI243469,2,phu,CCC 698,South American ,peru,cultivated
+11,BAO_200_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245320,4,tbradg,COR C.11,South American ,chile,cultivated
+8,BAO_202_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246497,4,tbradg,COR P.164,South American ,peru,cultivated
+8,BAO_203_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246499,4,tbradg,COR P.166,South American ,peru,cultivated
+8,BAO_204_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246514,4,tbradg,COR P.202,South American ,peru,cultivated
+8,BAO_206_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246518,4,tbradg,COR P.205B,South American ,peru,cultivated
+8,BAO_207_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246521,4,tbradg,COR P.207,South American ,peru,cultivated
+8,BAO_208_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246540,4,tbradg,COR P.242,South American ,peru,cultivated
+8,BAO_209_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246541,4,tbradg,COR P.243,South American ,peru,cultivated
+8,BAO_210_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246544,4,tbradg,COR P.246,South American ,peru,cultivated
+8,BAO_211_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246545,4,tbradg,COR P.247,South American ,peru,cultivated
+8,BAO_212_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246555,4,tbradg,COR P.257,South American ,peru,cultivated
+8,BAO_213_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI246979,4,tbradg,COR E.448,South American ,peru,cultivated
+10,BAO_214_S4_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI255494,4,tbradg,CEEA 19,South American ,bolivia,cultivated
+11,BAO_215_S10_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI255503,4,tbradg,BRU 741,South American ,argentina,cultivated
+10,BAO_216_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI255508,4,tbradg,BRU 806,South American ,bolivia,cultivated
+10,BAO_219_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI258917,4,tbradg,CAR 350,South American ,bolivia,cultivated
+10,BAO_221_S46_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI265868,4,tbradg,EBS 1816,South American ,bolivia,cultivated
+10,BAO_222_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280886,4,tbradg,WAC 156,South American ,bolivia,cultivated
+10,BAO_223_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280942,4,tbradg,WAC 1426,South American ,bolivia,cultivated
+10,BAO_224_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280960,4,tbradg,WAC 1468,South American ,bolivia,cultivated
+8,BAO_225_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280969,4,tbradg,WAC 1495,South American ,peru,cultivated
+10,BAO_226_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280988,4,tbradg,WAC 710,South American ,bolivia,cultivated
+10,BAO_227_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280990,4,tbradg,WAC 719,South American ,bolivia,cultivated
+10,BAO_228_S41_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI280998,4,tbradg,WAC 741,South American ,bolivia,cultivated
+10,BAO_230_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281009,4,tbradg,WAC 770,South American ,bolivia,cultivated
+10,BAO_231_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281012,4,tbradg,WAC 775,South American ,bolivia,cultivated
+10,BAO_233_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281023,4,tbradg,WAC 849,South American ,bolivia,cultivated
+8,BAO_234_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281038,4,tbradg,WAC 5,South American ,peru,cultivated
+8,BAO_235_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281041,4,tbradg,WAC 8,South American ,peru,cultivated
+8,BAO_236_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281046,4,tbradg,WAC 168,South American ,peru,cultivated
+8,BAO_237_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281059,4,tbradg,WAC 198,South American ,peru,cultivated
+8,BAO_238_S49_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281060,4,tbradg,WAC 206,South American ,peru,cultivated
+8,BAO_240_S61_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281062,4,tbradg,WAC 210,South American ,peru,cultivated
+8,BAO_241_S67_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281063,4,tbradg,WAC 212,South American ,peru,cultivated
+8,BAO_242_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281064,4,tbradg,WAC 215,South American ,peru,cultivated
+8,BAO_243_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281065,4,tbradg,WAC 216,South American ,peru,cultivated
+8,BAO_244_S85_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281066,4,tbradg,WAC 217,South American ,peru,cultivated
+8,BAO_245_S91_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281070,4,tbradg,WAC 240,South American ,peru,cultivated
+8,BAO_246_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281071,4,tbradg,WAC 242,South American ,peru,cultivated
+8,BAO_247_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281073,4,tbradg,WAC 245,South American ,peru,cultivated
+8,BAO_248_S62_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281074,4,tbradg,WAC 246,South American ,peru,cultivated
+8,BAO_250_S74_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281076,4,tbradg,WAC 248,South American ,peru,cultivated
+8,BAO_251_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281078,4,tbradg,WAC 254,South American ,peru,cultivated
+8,BAO_252_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281079,4,tbradg,WAC 256,South American ,peru,cultivated
+8,BAO_254_S51_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281083,4,tbradg,WAC 262,South American ,peru,cultivated
+8,BAO_258_S75_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281092,4,tbradg,WAC 282,South American ,peru,cultivated
+8,BAO_259_S81_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281093,4,tbradg,WAC 286,South American ,peru,cultivated
+8,BAO_262_S52_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281101,4,tbradg,WAC 313,South American ,peru,cultivated
+8,BAO_264_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281107,4,tbradg,WAC 336,South American ,peru,cultivated
+8,BAO_265_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281111,4,tbradg,WAC 350,South American ,peru,cultivated
+8,BAO_267_S82_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281119,4,tbradg,WAC 370,South American ,peru,cultivated
+8,BAO_269_S94_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281198,4,tbradg,WAC 607,South American ,peru,cultivated
+8,BAO_270_S53_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281227,4,tbradg,WAC 688,South American ,peru,cultivated
+8,BAO_271_S59_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI281258,4,tbradg,WAC 915,South American ,peru,cultivated
+15,BAO_272_S65_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI283123,2,phu,OCH 1475,South American ,ecuador,cultivated
+15,BAO_273_S71_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI283134,2,phu,OCH 1412,South American ,colombia,cultivated
+8,BAO_274_S77_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292078,4,tbradg,UGN 5257,South American ,peru,cultivated
+8,BAO_275_S83_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292086,4,tbradg,UGN 5309,South American ,peru,cultivated
+8,BAO_276_S89_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292089,4,tbradg,UGN 5382,South American ,peru,cultivated
+8,BAO_277_S95_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292090,4,tbradg,UGN 5383,South American ,peru,cultivated
+8,BAO_278_S54_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292096,4,tbradg,UGN 5488,South American ,peru,cultivated
+8,BAO_279_S60_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292097,4,tbradg,UGN 5489,South American ,peru,cultivated
+8,BAO_280_S66_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI292107,4,tbradg,UGN 5540,South American ,peru,cultivated
+8,BAO_281_S72_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI310949,4,tbradg,UGN 3538,South American ,peru,cultivated
+11,BAO_282_S90_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320326,4,tbradg,HHR 4051,South American ,argentina,cultivated
+15,BAO_283_S96_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320351,2,phu,CCC 1210,South American ,colombia,cultivated
+15,BAO_284_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320354,2,phu,CCC 1217,South American ,colombia,cultivated
+15,BAO_285_S88_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320355,2,phu,CCC 1219,South American ,colombia,cultivated
+15,BAO_286_S94_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320358,2,phu,CCC 1229,South American ,colombia,cultivated
+15,BAO_287_S19_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320361,2,phu,CCC 1235,South American ,colombia,cultivated
+15,BAO_288_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI320362,2,phu,CCC 1236,South American ,colombia,cultivated
+16,BAO_289_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI365344,2,stn,OCH S-46,South American ,peru,cultivated
+8,BAO_290_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI365345,4,tbradg,OCH S-100,South American ,peru,cultivated
+8,BAO_291_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI365346,4,tbradg,OCH S-103,South American ,peru,cultivated
+8,BAO_292_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI365372,4,tbradg,OCH SC-96,South American ,peru,cultivated
+11,BAO_295_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473246,4,tbradg,HOF 1552,South American ,argentina,cultivated
+11,BAO_296_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473247,4,tbradg,OKA 3872,South American ,argentina,cultivated
+11,BAO_297_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473249,4,tbradg,OKA 3888,South American ,argentina,cultivated
+11,BAO_298_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473251,4,tbradg,OKA 3938,South American ,argentina,cultivated
+11,BAO_299_S44_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473255,4,tbradg,OKA 3997,South American ,argentina,cultivated
+11,BAO_300_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473259,4,tbradg,HOF 2010,South American ,argentina,cultivated
+11,BAO_301_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473265,4,tbradg,OKA 4296,South American ,argentina,cultivated
+11,BAO_303_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473270,4,tbradg,OKA 4890,South American ,argentina,cultivated
+11,BAO_304_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473272,4,tbradg,OKA 5415,South American ,argentina,cultivated
+11,BAO_305_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473281,4,tbradg,OKA 5552,South American ,argentina,cultivated
+11,BAO_306_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473284,4,tbradg,OKA 5603,South American ,argentina,cultivated
+11,BAO_307_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473286,4,tbradg,OKA 5655,South American ,argentina,cultivated
+10,BAO_312_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473393,4,tbradg,HHCH 4598,South American ,bolivia,cultivated
+10,BAO_313_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473507,4,tbradg,AST 26,South American ,bolivia,cultivated
+10,BAO_314_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI473508,4,tbradg,AST 42,South American ,bolivia,cultivated
+15,BAO_315_S46_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI498171,2,phu,CCC 5128,South American ,colombia,cultivated
+11,BAO_318_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI500058,4,tbradg,OKA 7572,South American ,argentina,cultivated
+10,BAO_319_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI546016,4,tbradg,HOHL 197,South American ,bolivia,cultivated
+10,BAO_320_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI546025,4,tbradg,HOHL 259,South American ,bolivia,cultivated
+11,BAO_321_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI558138,4,tbradg,OKA 7559,South American ,argentina,cultivated
+11,BAO_323_S47_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI558144,4,tbradg,OKA 7599,South American ,argentina,cultivated
+11,BAO_324_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI558145,4,tbradg,OKA 7674,South American ,argentina,cultivated
+11,BAO_325_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI566802,4,tbradg,KUL s.n.,South American ,argentina,cultivated
+11,BAO_326_S18_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI566803,4,tbradg,OKA 4312,South American ,argentina,cultivated
+9,BAO_327_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI567848,4,tbradg,SCLp 5061,South American ,ecuador,cultivated
+2,BAO_328_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583329,4,tbr,CIP 391003,South American ,peru,cultivated
+2,BAO_329_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583331,4,tbr,CIP 391013,South American ,peru,cultivated
+2,BAO_330_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583332,4,tbr,CIP 391018,South American ,peru,cultivated
+2,BAO_331_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583333,4,tbr,CIP 391019,South American ,peru,cultivated
+2,BAO_332_S49_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583334,4,tbr,CIP 391021,South American ,peru,cultivated
+2,BAO_333_S55_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583335,4,tbr,CIP 391044,South American ,peru,cultivated
+2,BAO_334_S61_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583336,4,tbr,CIP 391046,South American ,peru,cultivated
+2,BAO_335_S66_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583337,4,tbr,CIP 391053,South American ,peru,cultivated
+2,BAO_336_S72_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583338,4,tbr,CIP 391054,South American ,peru,cultivated
+2,BAO_337_S78_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583339,4,tbr,CIP 391056,South American ,peru,cultivated
+2,BAO_338_S83_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583340,4,tbr,CIP 391057,South American ,peru,cultivated
+2,BAO_339_S89_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583341,4,tbr,CIP 391137,South American ,peru,cultivated
+2,BAO_340_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI583342,4,tbr,CIP 391060,South American ,peru,cultivated
+2,BAO_341_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI584493,4,tbr,CIP 391004,South American ,peru,cultivated
+2,BAO_342_S62_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI584494,4,tbr,CIP 391008,South American ,peru,cultivated
+2,BAO_344_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI584496,4,tbr,CIP 391048,South American ,peru,cultivated
+4,BAO_345_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI587110,4,tbr,CPS 4543,South American ,chile,wild 
+12,BAO_346_S84_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI587115,4,tbradg,SVRPV 6327,South American ,venezuela,cultivated
+2,BAO_347_S90_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI590927,4,tbr,CIP 391007,South American ,peru,cultivated
+4,BAO_349_S57_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595449,4,tbr,CON 888,South American ,chile,cultivated
+4,BAO_350_S63_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595458,4,tbr,CON 925,South American ,chile,cultivated
+15,BAO_351_S68_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595514,2,phu,VIR 17648,South American ,NA,cultivated
+8,BAO_352_S74_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607886,4,tbradg,SS 7223,South American ,peru,cultivated
+18,BAO_353_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595454,2,brc,595454_bulk _2012,South American ,chile,cultivated
+6,BARBARA_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI661982,4,tbr,BARBARA,europe,germany,cultivated
+20,GS_223_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,GS_223,4,tbr,DM 1-3 516 R44,North America,US,genetic material
+1,GS_22_S44_R1_001_cutadapt_bowtie_sort_rg_marked.bam,GS_22,4,tbr,US-W 3573-KATAHADIN,North America,US,cultivated
+1,GS_23_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,GS_23,4,tbr,US-W 4519-MERRIMACK,North America,US,cultivated
+13,KBLV_56-01_S85_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-01,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-06_S91_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-06,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-25_S52_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-25,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-26_S58_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-26,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-27_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-27,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-28_S69_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-28,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-29_S75_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-29,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-30_S81_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-30,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-31_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-31,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-32_S92_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-32,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-33_S53_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-33,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-36_S59_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-36,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-37_S65_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-37,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-38_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-38,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-39_S76_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-39,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-40_S82_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-40,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-41_S87_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-41,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-42_S93_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-42,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-43_S54_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-43,2,blv,HHCH5058,South American ,peru,wild 
+13,KBLV_56-44_S60_R1_001_cutadapt_bowtie_sort_rg_marked.bam,KBLV_56-44,2,blv,HHCH5058,South American ,peru,wild 
+6,PI_131750_S54_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_131750,4,tbr,OSTBOTE,europe,germany,cultivated
+6,PI_182550_S19_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_182550,4,tbr,ACKERSEGEN,europe,germany,cultivated
+6,PI_199102_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_199102,4,tbr,VICTOR,europe,spain,cultivated
+6,PI_199285_S80_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_199285,4,tbr,FRUHPERLE,europe,germany,cultivated
+6,PI_200115_S61_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_200115,4,tbr,BELLE DE FONTENAY,europe,france,cultivated
+6,PI_200117_S10_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_200117,4,tbr,LIMOSA,europe,Netherlands,cultivated
+20,PI_201406_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_201406,4,tbr,R1R4,europe,UK,genetic material
+20,PI_201407_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_201407,4,tbr,R2R3,europe,UK,genetic material
+6,PI_201777_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_201777,4,tbr,MARIUS,europe,Norway,cultivated
+20,PI_215618_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_215618,4,tbr,R1R2R3R4,europe,UK,genetic material
+20,PI_215620_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_215620,4,tbr,R2R3R4,europe,UK,genetic material
+20,PI_215621_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_215621,4,tbr,R1R3R4,europe,UK,genetic material
+20,PI_215623_S8_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_215623,4,tbr,R1R2R4 2070(69),europe,UK,genetic material
+6,PI_217560_S66_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_217560,4,tbr,URGENTA,europe,Netherlands,cultivated
+6,PI_223726_S55_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_223726,4,tbr,BEVELANDER,europe,Natherlands,cultivated
+6,PI_223730_S67_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_223730,4,tbr,MARITTA,europe,germany,cultivated
+6,PI_237741_S76_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_237741,4,tbr,ELLA,europe,germany,cultivated
+6,PI_238084_S62_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_238084,4,tbr,FORTUNA,europe,germany,cultivated
+5,PI_239413_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_239413,4,tbr,DORITA,South American ,mexico,cultivated
+6,PI_239567_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_239567,4,tbr,SIEGLINDE,europe,Austria,cultivated
+4,PI245792_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245792,4,tbr,MORADA OJUDA,South American ,chile,cultivated
+4,PI245800_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI245800,4,tbr,MUCANA - COR C.60,South American ,chile,landrace
+6,PI_249611_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_249611,4,tbr,AMBRA,europe,Czech republic,cultivated
+6,PI_270542_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_270542,4,tbr,SUSANNA,europe,germany,cultivated
+6,PI_285264_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_285264,4,tbr,ADVIRA,europe,germany,cultivated
+20,PI_303146_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_303146,4,tbr,R5,europe,UK,genetic material
+20,PI_303149_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_303149,4,tbr,R8,europe,UK,genetic material
+20,PI_303150_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_303150,4,tbr,Rmulti,europe,UK,genetic material
+6,PI_310467_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_310467,4,tbr,DESIREE,europe,netherlands,cultivated
+6,PI_319198_S77_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_319198,4,tbr,MIRKA,europe,czech republic,cultivated
+5,PI_319425_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_319425,4,tbr,ATZIMBA,South American ,mexico,cultivated
+5,PI_319426_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_319426,4,tbr,BERTITA,South American ,mexico,cultivated
+1,PI_319433_S56_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_319433,4,tbr,GRETA,North American,canada,cultivated
+20,PI_319848_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_319848,4,tbr,HOKKAI #45,asia,japan,cultivated
+6,PI_321620_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_321620,4,tbr,COSIMA,europe,germany,cultivated
+6,PI_321621_S18_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_321621,4,tbr,FELDESLOHN,europe,germany,cultivated
+6,PI_321622_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_321622,4,tbr,FINA,europe,germany,cultivated
+5,PI_326021_S84_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_326021,4,tbr,JUANITA,South American ,mexico,cultivated
+20,PI_344117_S88_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_344117,4,tbr,KENYA AKIBA,africa,kenya,cultivated
+6,PI_349761_S84_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_349761,4,tbr,ISKRA,europe,Russia,cultivated
+6,PI_349776_S90_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_349776,4,tbr,ISLA CAUCAHUA,europe,Russia,cultivated
+6,PI_349782_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_349782,4,tbr,CHILOE ANCUD,europe,Russia,cultivated
+6,PI_351052_S8_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_351052,4,tbr,JAAKKO,europe,finland,cultivated
+20,PI_362717_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362717,4,tbr,KUFRI JEEVAN,Asia,india,cultivated
+6,PI_362729_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362729,4,tbr,KANDIDAT,europe,russia,cultivated
+6,PI_362730_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362730,4,tbr,CARMIKAVSKIJ,europe,russia,cultivated
+6,PI_362738_S89_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362738,4,tbr,OGONEK,europe,russia,cultivated
+6,PI_362741_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362741,4,tbr,TASTY,europe,russia,cultivated
+6,PI_362742_S52_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362742,4,tbr,TEMP,europe,russia,cultivated
+6,PI_362744_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_362744,4,tbr,VARMAS,europe,russia,cultivated
+6,PI_372878_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_372878,4,tbr,TALOVSKY 110,europe,russia,cultivated
+6,PI_377745_S18_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_377745,4,tbr,MARIS PIPER,europe,UK,cultivated
+6,PI_379596_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_379596,4,tbr,CARIVINCA,europe,russia,cultivated
+6,PI_379605_S58_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_379605,4,tbr,STOLOVIJ 19,europe,russia,cultivated
+6,PI_407410_S95_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407410,4,tbr,MULTA,europe,netherlands,cultivated
+6,PI407411_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI407411,4,tbr,SATURNA,europe,netherlands,cultivated
+6,PI_407412_S86_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407412,4,tbr,VORAN,europe,germany,cultivated
+6,PI_407416_S4_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407416,4,tbr,ARRAN PILOT,europe,UK,cultivated
+6,PI_407417_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407417,4,tbr,BINTJE,europe,netherlands,cultivated
+6,PI_407419_S57_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407419,4,tbr,EERSTELING DUKE OF YORK,europe,UK,cultivated
+6,PI_407420_S94_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407420,4,tbr,KING EDWARD,europe,UK,cultivated
+6,PI_407421_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407421,4,tbr,MAJESTIC,europe,UK,cultivated
+6,PI_407425_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_407425,4,tbr,UP TO DATE,europe,UK,cultivated
+6,PI_423632_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423632,4,tbr,KAMERAZ,europe,russia,cultivated
+6,PI_423648_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423648,4,tbr,SASKIA,europe,netherlands,cultivated
+6,PI_423649_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423649,4,tbr,VOKAL,europe,netherlands,cultivated
+6,PI_423661_S63_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423661,4,tbr,EIGENHEIMER,europe,netherlands,cultivated
+6,PI_423662_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423662,4,tbr,LIBERTAS,europe,netherlands,cultivated
+6,PI_423669_S47_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423669,4,tbr,VEKARO,europe,netherlands,cultivated
+6,PI_423670_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_423670,4,tbr,VIVAKS,europe,netherlands,cultivated
+6,PI_451705_S65_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_451705,4,tbr,MARIS BARD,europe,UK,cultivated
+6,PI_451706_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_451706,4,tbr,CROFT,europe,UK,cultivated
+6,PI_451707_S78_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_451707,4,tbr,PENTLAND DELL,europe,UK,cultivated
+6,PI_451708_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_451708,4,tbr,PENTLAND JAVELIN,europe,UK,cultivated
+6,PI_451709_S13_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_451709,4,tbr,PENTLAND SQUIRE,europe,UK,cultivated
+6,PI_462333_S41_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_462333,4,tbr,VITA,europe,russia,cultivated
+6,PI_475775_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_475775,4,tbr,CRAIGS SNOWWHITE,europe,UK,cultivated
+6,PI_475776_S72_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_475776,4,tbr,PENTLAND ACE,europe,UK,cultivated
+6,PI_475781_S53_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_475781,4,tbr,LOSHITSKY,europe,belarus,cultivated
+5,PI_491542_S75_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_491542,4,tbr,MONSERRATE,South American ,mexico,cultivated
+3,PI511845_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI511845,4,tbr,SERRANA INTA,South American ,argentina,cultivated
+7,PI511856_S41_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI511856,4,tbr,CAPIRO,South American ,colombia,cultivated
+6,PI_515921_S78_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_515921,4,tbr,GRANOLA,europe,germany,cultivated
+3,PI_518592_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_518592,4,tbr,PAPA AMARGA,South American ,uruguay,cultivated
+6,PI_527881_S65_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527881,4,tbr,RODBROKIG,europe,sweden ,cultivated
+6,PI_527882_S71_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527882,4,tbr,ROFA,europe,russia,cultivated
+6,PI_527893_S64_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527893,4,tbr,IRIS,europe,germany,cultivated
+6,PI_527897_S52_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527897,4,tbr,DRAYTON,europe,UK,cultivated
+6,PI_527906_S94_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527906,4,tbr,PENTLAND CROWN,europe,UK,cultivated
+6,PI_527922_S70_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527922,4,tbr,JASMIN,europe,poland,cultivated
+6,PI_527923_S53_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527923,4,tbr,PERKOZ,europe,poland,cultivated
+6,PI_527925_S88_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527925,4,tbr,OTTAR,europe,norway,cultivated
+6,PI_527926_S60_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527926,4,tbr,TROLL,europe,norway,cultivated
+6,PI_527927_S77_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527927,4,tbr,RUTT,europe,norway,cultivated
+6,PI_527929_S95_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527929,4,tbr,SUPER,europe,romania,cultivated
+4,PI_527977_S82_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527977,4,tbr,LOW BAY,South American ,chile,landrace
+5,PI_527978_S76_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527978,4,tbr,LOMAN,South American ,guatemala,cultivated
+7,PI_527979_S89_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_527979,4,tbr,SANTO AMOR,South American ,brazil,cultivated
+7,PI527980_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI527980,4,tbr,ARACY,South American ,brazil,cultivated
+6,PI537035_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI537035,4,tbr,STOBRAWA,europe,poland,cultivated
+6,PI_537040_S47_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_537040,4,tbr,KINGSTON,europe,UK,cultivated
+6,PI_537045_S87_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_537045,4,tbr,PENTLAND MARBLE,europe,UK,cultivated
+20,PI_584993_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_584993,4,phu,IVP 48,europe,netherlands,genetic material
+6,PI_587046_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587046,4,tbr,UKAMA,europe,netherlands,cultivated
+6,PI587048_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI587048,4,tbr,ARMA,europe,UK,cultivated
+6,PI_587049_S41_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587049,4,tbr,MILA,europe,poland,cultivated
+6,PI_587050_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587050,4,tbr,URAN,europe,poland,cultivated
+6,PI_587051_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587051,4,tbr,CORINE,europe,netherlands,cultivated
+6,PI_587052_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587052,4,tbr,OMEGA,europe,germany,cultivated
+20,PI_587053_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587053,4,tbr,CFK-69-1,South American ,unknown,unknown
+6,PI_587054_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587054,4,tbr,ZAREWO,europe,ukraine,cultivated
+6,PI587063_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI587063,4,tbr,PRIEKULSKY RANNY,europe,latvia,cultivated
+6,PI587064_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI587064,4,tbr,NEVSKII,europe,russia,cultivated
+6,PI_587065_S4_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587065,4,tbr,ANETT,europe,germany,cultivated
+5,PI587067_S47_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI587067,4,tbr,TOLLOCAN,South American ,mexico,cultivated
+2,PI_587068_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587068,4,tbr,MARIA,South American ,peru,cultivated
+7,PI_587069_S10_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587069,4,tbr,SANTA CATALINA,South American ,ecuador,cultivated
+20,PI_587072_S18_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587072,4,tbr,KENYA BARAKA,africa,kenya,cultivated
+2,PI_587073_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587073,4,tbr,GABRIELA,South American ,peru,cultivated
+6,PI_587077_S71_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587077,4,tbr,SPUNTA,europe,netherlands,cultivated
+6,PI_587084_S81_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_587084,4,tbr,NEVSKY-3RD,europe,russia,cultivated
+6,PI_595403_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595403,4,tbr,POLIOT,europe,russia,cultivated
+6,PI_595405_S82_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595405,4,tbr,SEDOV,europe,russia,cultivated
+6,PI_595406_S46_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595406,4,tbr,SYR-9,europe,russia,cultivated
+2,PI_595415_S87_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595415,4,tbr,CHASKA,South American ,peru,cultivated
+6,PI_595420_S19_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595420,4,tbr,AURA,europe,france,cultivated
+6,PI_595424_S93_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595424,4,tbr,MANDEL,europe,sweden ,cultivated
+6,PI_595425_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595425,4,tbr,MARIJKE,europe,netherlands,cultivated
+14,PI595438_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI595438,4,juz,AZUL LUK'I,South American ,bolivia,landrace
+10,PI_595444_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595444,4,tbradg,QOYLLU,South American ,bolivia,landrace
+4,PI_595492_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_595492,4,tbr,GUADACHO - SC 4425,South American ,chile,landrace
+20,PI_597782_S74_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_597782,4,tbr,COLIBAN,australia,australia,cultivated
+14,PI_599259_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_599259,2,juz,LUCKY,South American ,bolivia,landrace
+20,PI_604211_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_604211,4,tbr,82-222-1,South American ,bolivia,genetic material
+10,PI_607472_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607472,4,tbradg,KHUCHI AKITA,South American ,bolivia,landrace
+6,PI_607475_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607475,4,tbr,NICOLA,europe,germany,cultivated
+6,PI_607480_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607480,4,tbr,JAMTLANDS VIT,europe,sweden ,cultivated
+6,PI_607482_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607482,4,tbr,SORT FRA AUKRUST,europe,norway,cultivated
+6,PI_607483_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607483,4,tbr,BJORNA,europe,sweden ,cultivated
+8,PI607491_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607491,4,tbradg,CUCHIPA ISMAYNIN - SA-1356,South American ,peru,landrace
+2,PI_607494_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607494,4,tbr,AMARILLO,South American ,peru,cultivated
+8,PI_607495_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607495,4,tbradg,CHAUCHA AMARILLA,South American ,peru,landrace
+4,PI_607497_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607497,4,tbr,PAPA CHONCA,South American ,chile,landrace
+8,PI_607498_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_607498,4,tbradg,RUNTU HUAYRO,South American ,peru,landrace
+2,PI607502_S13_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI607502,4,tbr,TACNA,South American ,peru,cultivated
+8,PI_611072_S91_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_611072,4,tbradg,YANA IMILLA,South American ,peru,landrace
+5,PI_611108_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_611108,4,tbr,MICHOACAN,South American ,mexico,cultivated
+2,PI_619135_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619135,4,tbr,YANA,South American ,peru,cultivated
+5,PI_619136_S68_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619136,4,tbr,CRUZA 148,South American ,mexico,cultivated
+8,PI619137_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619137,4,tbradg,SA-450,South American ,peru,landrace
+8,PI_619139_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619139,4,tbradg,OJO DE BUEY,South American ,peru,cultivated
+8,PI_619140_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619140,4,tbradg,SANATANLALLA,South American ,peru,landrace
+8,PI619141_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619141,4,tbradg,HUAGALINA,South American ,peru,landrace
+8,PI619142_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI619142,4,tbradg,BADULAQUE,SouthAmerican,peru,landrace
+8,PI_619144_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619144,4,tbradg,PIRAMPO,South American ,peru,landrace
+8,PI_619145_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619145,4,tbradg,TARMELINA,South American ,peru,landrace
+8,PI_619146_S46_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619146,4,tbradg,PAQOCHA O MURU URENA,South American ,peru,landrace
+11,PI_619148_S10_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619148,4,tbradg,CORAZON ROSADO,South American ,argentina,landrace
+20,PI_619149_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619149,4,tbr,DG-D4-21,europe,poland,genetic material
+20,PI_619151_S66_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619151,4,tbr,97A-77,europe,poland,genetic material
+6,PI_619152_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619152,4,tbr,MEDUZA,europe,poland,cultivated
+6,PI_619155_S67_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619155,4,tbr,REZERV,europe,russia,cultivated
+6,PI_619156_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619156,4,tbr,DOBRO,europe,belarus,cultivated
+2,PI_619158_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_619158,4,tbr,V-3,South American ,peru,cultivated
+6,PI_629019_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_629019,4,tbr,SYLVIA (CPVPA),europe,france,cultivated
+6,PI_629020_S19_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_629020,4,tbr,CYNTHIA,europe,france,cultivated
+6,PI_629023_S13_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_629023,4,tbr,MARINE,europe,france,cultivated
+20,PI_630949_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_630949,4,tbr,97A-51,europe,poland,genetic material
+20,PI_630952_S50_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_630952,4,tbr,A97084-44,South American ,mexico,genetic material
+20,PI_630953_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_630953,4,tbr,EGA 9706-14,South American ,mexico,genetic material
+20,PI_631416_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_631416,4,tbr,DG-D8-330,europe,poland,genetic material
+20,PI_631417_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_631417,4,tbr,97A-64,europe,poland,genetic material
+20,PI_631418_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_631418,4,tbr,97A-68,europe,poland,genetic material
+8,PI_631419_S68_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_631419,4,tbradg,GARHUASH HUAYRO,South American ,peru,landrace
+20,PI_633600_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_633600,4,tbr,A9520-05,South American ,mexico,genetic material
+6,PI633601_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI633601,4,tbr,EDEN,europe,UK,cultivated
+6,PI633602_S18_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI633602,4,tbr,SHERIFF,europe,UK,cultivated
+6,PI633604_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI633604,4,tbr,TEENA,europe,UK,cultivated
+6,PI633605_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI633605,4,tbr,TORRIDON,europe,UK,cultivated
+6,PI_633606_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_633606,4,tbr,CHARLOTTE,europe,france,cultivated
+2,PI_634530_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634530,4,tbr,REICHE,South American ,peru,cultivated
+2,PI634531_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI634531,4,tbr,COSTANERA,South American ,peru,cultivated
+2,PI_634532_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634532,4,tbr,CANCHAN - INIA,South American ,peru,cultivated
+2,PI_634533_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634533,4,tbr,PERRICHOLI,South American ,peru,cultivated
+2,PI_634534_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634534,4,tbr,YUNGAY,South American ,peru,cultivated
+20,PI_634776_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634776,4,tbr,BORA VALLEY,asia,s. korea,cultivated
+20,PI_634777_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634777,4,tbr,EARLY VALLEY,asia,s. korea,cultivated
+20,PI_634778_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634778,4,tbr,GOGU VALLEY,asia,s. korea,cultivated
+20,PI_634780_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_634780,4,tbr,PURPLE VALLEY,asia,s. korea,cultivated
+20,PI_635116_S4_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_635116,4,tbr,BP1,africa,s. africa,cultivated
+6,PI_639204_S73_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_639204,4,tbr,ALWARA,europe,germany,cultivated
+8,PI642181_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642181,4,tbradg,YURACC CCOMPIS,South American ,peru,landrace
+8,PI642182_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642182,4,tbradg,YANA MACUCO,South American ,peru,landrace
+8,PI642183_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI642183,4,tbradg,CHUNGUINA,South American ,peru,landrace
+8,PI_642184_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642184,4,tbradg,SUYTU VILQUINA,South American ,peru,landrace
+8,PI_642185_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642185,4,tbradg,GAYNA,South American ,peru,landrace
+8,PI_642186_S13_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642186,4,tbradg,YUGUIMA,South American ,peru,landrace
+8,PI_642187_S19_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642187,4,tbradg,PACIENCIA,South American ,peru,landrace
+8,PI_642188_S25_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642188,4,tbradg,POLLUNTA CHATA,South American ,peru,landrace
+12,PI_642189_S31_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642189,4,tbradg,RUBI,South American ,colombia,landrace
+2,PI_642429_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642429,4,tbr,UNICA,South American ,peru,cultivated
+20,PI_642430_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642430,4,tbr,GUI VALLEY,asia,s. korea,cultivated
+8,PI_642438_S37_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642438,4,tbradg,ALCCA IMILLA,South American ,peru,landrace
+8,PI_642439_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642439,4,tbradg,CANASTA,South American ,peru,landrace
+8,PI_642440_S43_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642440,4,tbradg,GARHUASH SUITO,South American ,peru,landrace
+8,PI_642441_S2_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642441,4,tbradg,HUICHIRI,South American ,peru,landrace
+10,PI_642442_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642442,4,tbradg,JANCKO PHINU,South American ,bolivia,landrace
+8,PI_642444_S14_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642444,4,tbradg,PUCA TROMBOS,South American ,peru,landrace
+8,PI_642446_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_642446,4,tbradg,OKELLA QUEHUILLO,South American ,peru,landrace
+8,PI645563_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI645563,4,tbradg,CASA BLANCA,South American ,peru,landrace
+20,PI_653760_S81_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_653760,4,tbr,ROSE VALLEY,asia,s. korea,cultivated
+8,PI653761_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI653761,4,tbradg,YANA HUALASH,South American ,peru,landrace
+20,PI_653830_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_653830,4,tbr,HERM 18 - haploid inducer,North America,US,genetic material
+20,PI_654350_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_654350,4,tbr,STICK VALLEY,asia,s. korea,cultivated
+10,PI654354_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI654354,4,tbradg,SOLIMAN,South American ,bolivia,landrace
+2,PI_657132_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657132,4,tbr,SANTA ANA,South American ,peru,cultivated
+2,PI_657133_S45_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657133,4,tbr,MARIA HUANCA,South American ,peru,cultivated
+2,PI_657134_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657134,4,tbr,KINIGI,South American ,peru,cultivated
+2,PI_657135_S4_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657135,4,tbr,MUZIRANZARA,South American ,peru,cultivated
+2,PI_657137_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657137,4,tbr,UNALM GUISI,South American ,peru,cultivated
+2,PI_657138_S22_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657138,4,tbr,MURUTA,South American ,peru,cultivated
+2,PI_657139_S28_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657139,4,tbr,ENFULA,South American ,peru,cultivated
+2,PI_657140_S34_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657140,4,tbr,VICTORIA (PE),South American ,peru,cultivated
+2,PI_657141_S40_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657141,4,tbr,DHEERA,South American ,peru,cultivated
+7,PI_657142_S5_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657142,4,tbr,INIAP FRIPAPA 99,South American ,ecuador,cultivated
+2,PI_657143_S11_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657143,4,tbr,BASADRE,South American ,peru,cultivated
+20,PI_657144_S17_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657144,4,tbr,C97.007,South American ,peru,genetic material
+20,PI_657145_S23_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657145,4,tbr,H96.316,South American ,peru,genetic material
+20,PI_657146_S29_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657146,4,tbr,CIP 396286.7,South American ,peru,genetic material
+8,PI_657147_S35_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_657147,4,tbradg,ALCA TARMA,South American ,peru,landrace
+8,PI658587_S33_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI658587,4,tbradg,GUINCHO NEGRA,South American ,peru,landrace
+6,PI_658588_S79_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_658588,4,tbr,ASTER,europe,poland,cultivated
+6,PI_658589_S83_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_658589,4,tbr,URSUS,europe,poland,cultivated
+9,PI660358_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI660358,4,tbradg,LEONA - OCH 10229,South American ,ecuador,landrace
+11,PI660359_S26_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI660359,4,tbradg,NEGRA OJOSA,South American ,argentina,landrace
+6,PI_661981_S47_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661981,4,tbr,ASUN,europe,spain,cultivated
+6,PI_661982_S32_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661982,4,tbr,BARBARA,europe,germany,cultivated
+6,PI_661983_S38_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661983,4,tbr,BZURA,europe,poland,cultivated
+6,PI_661984_S6_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661984,4,tbr,FINA DE CARBALLO,europe,spain,cultivated
+6,PI_661985_S44_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661985,4,tbr,GORBEA,europe,spain,cultivated
+6,PI_661986_S12_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661986,4,tbr,GOYA,europe,spain,cultivated
+6,PI_661987_S18_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661987,4,tbr,IKER,europe,spain,cultivated
+6,PI_661988_S24_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661988,4,tbr,NAGORE,europe,spain,cultivated
+6,PI_661989_S30_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661989,4,tbr,PIROLA,europe,germany,cultivated
+7,PI_661990_S36_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_661990,4,tbr,PASTUSA SUPREMA,South American ,colombia,cultivated
+6,PI_662322_S72_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_662322,4,tbr,PICASSO,europe,netherlands,cultivated
+12,PI_662323_S48_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_662323,4,tbradg,ROJA NARINO,South American ,colombia,landrace
+8,PI_662324_S3_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_662324,4,tbradg,LLUNCHUYWAQACHI,South American ,peru,landrace
+1,PI_662325_S42_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_662325,4,tbr,BLUE SHETLAND,North America,canada,cultivated
+6,PI_664473_S7_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_664473,4,tbr,BISON (D),europe,germany,cultivated
+8,PI_664474_S15_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_664474,4,tbradg,YANAMATA,South American ,peru,landrace
+8,PI_664475_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_664475,4,tbradg,CHIQUILLA PITIQUINA,South American ,peru,landrace
+8,PI_664476_S27_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_664476,4,tbradg,AMBAR,South American ,peru,landrace
+6,PI_665406_S1_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_665406,4,tbr,OLALLA,europe,spain,cultivated
+12,PI_665407_S9_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_665407,4,tbradg,YEMA DE HUEVO,South American ,colombia,landrace
+6,PI_666142_S41_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_666142,4,tbr,MYATTS ASHLEAF,europe,UK,cultivated
+6,PI_666963_S16_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_666963,4,tbr,SANTE,europe,netherlands,cultivated
+20,PI_666964_S20_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_666964,4,tbr,SAIKAI 35,asia,japan,cultivated
+10,PI_669829_S39_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_669829,4,tbradg,HUAYCU,South American ,bolivia,landrace
+20,PI_672073_S21_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_672073,4,tbr,IGOROTA - LBR1-5,asia,philippines,cultivated
+1,PI_673449_S60_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_673449,4,tbr,ERAMOSA,North America,canada,cultivated
+1,PI_673450_S44_R1_001_cutadapt_bowtie_sort_rg_marked.bam,PI_673450,4,tbr,ELMER'S BLUE,North American,canada,cultivated

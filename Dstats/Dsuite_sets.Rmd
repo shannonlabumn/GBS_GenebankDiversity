@@ -1,0 +1,82 @@
+---
+title: "ABBABABBBA"
+author: "Heather Tuttle"
+date: "2023-06-05"
+output: html_document
+---
+
+#read in
+```{r}
+sets <- read.csv("~/Documents/metadata_sets.txt")
+```
+
+
+
+
+SETS5
+tbr 1, tbr2 and the and/phu/stn group with the boliviense out
+```{r}
+
+sets$populations.8[which(sets$populations.8 == "8"|sets$populations.8 == "9"|sets$populations.8 == "10"|sets$populations.8 == "11"|sets$populations.8 == "12"|sets$populations.8 == "15"|sets$populations.8 == "16")] <- "8" #populations 8,9,10,11,12,15 and 16 are grouped into adg
+
+
+
+sets$populations.8[which(sets$populations.8 == "3")] <- "xxx" #removing from analysis, small sample size
+sets$populations.8[which(sets$populations.8 == "17")] <- "xxx" #remove
+sets$populations.8[which(sets$populations.8 == "18")] <- "xxx" #remove
+sets$populations.8[which(sets$populations.8 == "19")] <- "xxx" #remove
+sets$populations.8[which(sets$populations.8 == "20")] <- "xxx" #remove
+sets$populations.8[which(sets$populations.8 == "14")] <- "xxx"#remove
+sets$populations.8[which(sets$populations.8 == "13")] <- "Outgroup"
+
+#The rest of the populations will be numbered seperately
+
+```
+
+
+sawp columns
+```{r}
+sets <- sets[ , c("full","populations.8")]
+```
+
+write to a file to use as a map
+```{r}
+write.table(sets, file = "~/Documents/sandbox_1/Dsuite_combined/Build/SETS5_no3.txt", row.names = F, col.names = F, quote = F, sep = "\t")
+```
+
+
+
+
+
+
+
+
+SETS6
+Let andigenuem vary (including phu and stn) and hold tbr constant
+```{r}
+sets$populations.8[which(sets$populations.8 == "1"|sets$populations.8 == "2"|sets$populations.8 == "3"|sets$populations.8 == "4"|sets$populations.8 == "5"|sets$populations.8 == "6"|sets$populations.8 == "7")] <- "7" #tbr populations grouped together
+ 
+
+sets$populations.8[which(sets$populations.8 == "20")] <- "xxx"
+sets$populations.8[which(sets$populations.8 == "18")] <- "xxx"
+sets$populations.8[which(sets$populations.8 == "17")] <- "xxx"
+sets$populations.8[which(sets$populations.8 == "19")] <- "xxx"
+sets$populations.8[which(sets$populations.8 == "14")] <- "xxx"
+sets$populations.8[which(sets$populations.8 == "13")] <- "Outgroup"
+
+```
+
+```{r}
+sets <- sets[,-c(3:9)] #remove unnecessary columns
+```
+
+```{r}
+sets <- sets[ , c("full","populations.8")] #swap columns
+```
+
+
+write to a file
+
+```{r}
+write.table(sets, file = "~/Documents/sandbox_1/Dsuite_combined/Dsuite_check_6/SETS_6.txt", row.names = F, col.names = F, quote = F, sep = "\t")
+```
