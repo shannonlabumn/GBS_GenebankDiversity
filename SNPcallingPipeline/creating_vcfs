@@ -1,0 +1,78 @@
+#in order to make SNP calls, you must first cut adapters with cutadapt and then create bam files with bowtie2 from fastq files using the code: 
+
+##Cutadapt##
+module load cutadapt
+
+for file in *.fastq;
+ do
+ name="${file}"
+
+
+cutadapt -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -f fastq -m 30  --quality-base=33 -o "${name%.*}"_cutadapt.fastq "$name" > "$name"_cutadapt.log
+
+done
+
+
+##bowtie2##
+module load bowtie2
+module load samtools
+
+for reads in *.cutadapt_fastq;
+do
+bowtie2 --phred33 -x /home/lmshannon/tutt0090/bowtie_index/potato_dm_v404_all_pm_un -q -U "$reads"|samtools view -S -b -q 20 -o "${reads%.*}"_bowtie.bam -
+done
+
+#Now to proceed to variant calling
+
+#for all datasets
+module load bcftools
+module load vcftools
+
+cd ~/directory/
+
+#for diploid variants
+##Call SNPS##                                                                                                                                                                                                                                                                  
+#bcftools mpileup -f potato_dm_v404_all_pm_un.fasta -b bamlist.txt --output-type u -a FORMAT/SP,FORMAT/DP,FORMAT/AD,INFO/AD --max-BQ   --min-BQ 20 --min-MQ 20 --skip-indels --output mpileup_diploid_raw.bcf                         
+##Call genotypes##                                                                                                                                                                                                                                                            
+module load bcftools                                                                                                                                                                                                                                                         
+bcftools call --output-type v -m --variants-only --ploidy 2 -prior 0 --skip-variants indels -o mpile_diploid_variants.vcf mpileup_diploid_raw.bcf                                                                                                                            
+#Filter ##                                                                                                                                                                                                                                                                      
+module load vcftools                                                                                                                                                                                                                                                         
+vcftools --vcf mpile_diploid_variants.vcf --out filtered_diploid_variants_maxmiss6_GQ30 --not-chr chr00 --not-chr ChrUn --min-alleles 2 --max-alleles 2 --max-missing 0.6 --minQ 30 --minGQ 30 --minDP 5 --maf 0.02 --remove-filtered-all --recode --recode-INFO-all
+
+
+#for tetraploid variants 
+##Call SNPS ##                                                                                                                                                                                                                                                                  
+#bcftools mpileup -f potato_dm_v404_all_pm_un.fasta -b bamlist.txt --output-type u -a FORMAT/SP,FORMAT/DP,FORMAT/AD,INFO/AD --min-BQ 20 --min-MQ 20 --skip-indels --output mpileup_tetraploid_raw.bcf                                 
+##Call genotypes##                                                                                                                                                                                                                                                            
+#module load bcftools                                                                                                                                                                                                                                                         
+#bcftools call --output-type v -m --variants-only --skip-variants indels -o mpile_tetraploid_variants.vcf mpileup_tetraploid_raw.bcf                                                                                                                                          
+#Filter##                                                                                                                                                                                                                                                                       
+module load vcftools
+vcftools --vcf mpile_tetraploid_variants.vcf --out filtered_tetraploid_variants --not-chr chr00 --not-chr ChrUn --min-alleles 2 --max-alleles 2 --max-missing 0.6 --minQ 40 --minGQ 60 --minDP 7 --maf 0.02 --remove-filtered-all --recode --recode-INFO-all
+
+
+#for the combined dataset 
+
+##Call SNPS                                                                                                                                                                                                                                                                   
+#bcftools mpileup -f /potato_dm_v404_all_pm_un.fasta -b bamlist.txt --output-type u -a FORMAT/SP,FORMAT/DP,FORMAT/AD,INFO/AD,INFO/MQ --min-BQ 20 --min-MQ 20 --skip-indels --output mpileup_diptet_raw.bcf                             
+##Call genotypes##                                                                                                                                                                                                                                                            
+module load bcftools                                                                                                                                                                                                                                                         
+#bcftools call --output-type v -m --variants-only --skip-variants indels -o mpile_diptet_variants.vcf mpileup_diptet_raw.bcf                                                                                                                                                  
+##Filter##                                                                                                                                                                                                                                                                      
+module load vcftools
+vcftools --vcf mpile_diptet_variants.vcf --out filtered_diptet_variants --not-chr chr00 --not-chr ChrUn --min-alleles 2 --max-alleles 2 --max-missing 0.6 --minQ 30 --minGQ 60 --minDP 5 --maf 0.02 --remove-filtered-all --recode --recode-INFO-all
+
+#Using GATK to select variants
+module load gatk/4.1.2
+
+#gatk IndexFeatureFile -F filtered_diptet_variants.recode.vcf                                                                                                                                                                                                                 
+
+gatk SelectVariants -R potato_dm_v404_all_pm_un.fasta -V filtered_diptet_variants.recode.vcf  -O filtered_diptet_variants_selected.recode.vcf -XL ChrUn -XL chr00 --exclude-filtered true --restrict-alleles-to BIALLELIC  --exclude-\
+non-variants true --select-type-to-include SNP --set-filtered-gt-to-nocall true
+
+
+
+
+#variant files to be passed to polyrad for genotyping with uncertainty!
+
