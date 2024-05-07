@@ -1,0 +1,205 @@
+---
+title: "ploidy_estimation_myscript_new"
+author: "Heather Tuttle"
+date: "9/29/2020"
+output: html_document
+---
+
+
+
+#Load these packages
+```{r}
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(mhsmm)
+library(quantmod)
+```
+
+#Bring in allele depth to obtain allele frequencies
+```{r}
+AD_file <- read.table("/Users/pesta/Documents/allployd_0815_AD.txt", sep = "\t", header = T)
+#AD_file <- AD_file[,-c(1,2)]
+```
+
+#We have to split the comma in the AD file and then have it loop through all of the samples.
+```{r}
+AD_list = list()
+count <- c(1:725)
+
+library(stringr)
+
+for (value in count) {
+  #grabbing the column that will be worked on
+ADcol <- AD_file[,value]
+  #taking that column and splitting the string
+split <- as.data.frame(str_split(as.character(ADcol), ",", n = 2, simplify = TRUE))
+#Are there NA's in the data? If so, change them to zero here (If not comment out the next step)
+split[split == "NA"] <- 0
+#adding appropriate names
+names(split) <- c("Reference","Alternate")
+AD_list[[value]] = split
+names(AD_list)[value] <- colnames(AD_file)[value]
+}
+#only for the PEPSICO data
+#These are being removed for low count
+AD_list[["BAO_201_S20_R1_001_cutadapt_bowtie2_sort.bam.AD"]] <- NULL
+AD_list[["PI_157202_S49_R1_001_cutadapt_bowtie2_sort.bam.AD"]] <- NULL
+```
+
+#grabbing depth totals so we can remove rows over a certain threshold
+```{r}
+depth_totals <- list()
+i <- c(1:723)
+for (something in i) {
+  object <- as.data.frame(AD_list[[something]] )
+  Reference <- as.numeric(object$Reference)
+  Alternate <- as.numeric(object$Alternate)
+  bind <- cbind(Reference, Alternate) 
+  sum <- rowSums(bind)
+  bindsum <- as.data.frame(cbind(bind, sum))
+  depth_totals[[something]] = bindsum
+  names(depth_totals)[something] <- names(AD_list[something])
+  
+}
+
+```
+
+
+#This next chunk needs to remove rows that do not have more than 60 reads combined
+```{r}
+newAD_list <- list()
+that <- c(1:723)
+
+for (this in that) {
+  element <- as.data.frame(depth_totals[[this]])
+  threshold <- element[element$sum >= 5,] # greater than or equal to 5 is kept
+  newAD <- as.data.frame(threshold[1:2])
+  newAD_list[[this]] = newAD
+  names(newAD_list)[this] <- names(AD_list[this])
+}
+```
+
+#This chunk sums total number of alternate and reference calls
+#may not need
+```{r}
+counter <- c(1:723)
+total_list = list()
+
+
+
+for (column in counter){
+  grab <- newAD_list[[column]]
+  countalt <- as.numeric(grab$Alternate)
+  countref <- as.numeric(grab$Reference)
+  sumalt <- sum(countalt)
+  sumref <- sum(countref)
+  sumtotal <- sumalt+sumref
+  #Append to a list names total list
+  total_list[[column]] <- sumtotal
+  #After the total, attach the name of the individual
+  #countname <- names(AD_list)
+  names(total_list)[column] <- names(AD_list[column])
+  #not run
+ # total_list <- as.numeric(unlist(total_list))
+    
+}
+```
+
+#Calculate ref freq
+
+```{r}
+ref_freq_list = list()
+i <- c(1:723)
+
+
+#Calculate reference frequency
+for (thing in i) {
+ item <- newAD_list[[thing]]
+  a <- as.numeric(item$Alternate)
+  r <- as.numeric(item$Reference)
+  ref_freq <- transform(item, Ref_freq = (r/(a+r)))
+  #Remove the NAs
+  clean_freq <- ref_freq[ref_freq$Ref_freq != "NaN",]
+  #append to the list
+  ref_freq_list[[thing]] = clean_freq
+  names(ref_freq_list)[thing] <-names(newAD_list[thing])
+  #continue to next column
+}
+```
+
+
+
+#plot ref freqs using the corresponding reference frequencies list
+```{r}
+
+ploidy_result_list <- list()
+average_count_list = list()
+
+
+l <- c(1:723)
+
+
+for (plots in l) {
+  ref <- as.data.frame(ref_freq_list[[plots]])
+  nam <-  names(ref_freq_list[plots])
+#We have to filter out those that do not have enough to plot
+  ref <- ref[ref$Ref_freq != 1,]
+  ref <- ref[ref$Ref_freq !=0,]
+  pull1 <- ref %>%
+  group_by(Ref_freq) %>%
+  mutate(count = n()) 
+  mean_count <- mean(pull1$count)
+  pull1 <<- pull1[pull1$count > mean_count,]
+#pull2 <- as.data.frame(pull1$Ref_freq)
+  plot_name <- nam  
+  #jpeg(plot_name)
+  print(ggplot(pull1, aes(x = Ref_freq, y = count)) + geom_smooth(method = "loess", se = FALSE, span = 0.4 ) +     
+  theme(panel.background = element_blank(), axis.text = element_text(size = 18), axis.title = 
+  element_text(size = 14, face = "bold"), plot.title = element_text(face = "bold") ) + 
+  scale_x_continuous(name = "Reference allele frequency") + ggtitle(names(ref_freq_list[plots])))
+  #dev.off()
+  
+  
+  
+         
+}
+```
+
+
+Sometimes, looking at pictures manually is hard when there are so many inds, so lets try finding peaks in the data using quant mod
+We will then add 1 to the heterozygous classes
+```{r}
+
+for (plots in l) {
+  ref <- as.data.frame(ref_freq_list[[plots]])
+  nam <-  names(ref_freq_list[plots])
+#We have to filter out those that do not have enough to plot
+  ref <- ref[ref$Ref_freq != 1,]
+  ref <- ref[ref$Ref_freq !=0,]
+  pull1 <- ref %>%
+  group_by(Ref_freq) %>%
+  mutate(count = n()) 
+  mean_count <- mean(pull1$count)
+  pull1 <<- pull1[pull1$count > mean_count,]
+
+#remove the 1st and second column
+pull2 <- pull1[-c(1,2)]
+pull3 <- unique(pull2)
+pull4 <- pull3[order(pull3$Ref_freq),]
+
+smooth <- loess(count ~ Ref_freq, pull4, span = 0.45) #Will produce warnings, ignore
+fitted_data <- smooth$fitted
+
+
+peak <- findPeaks(fitted_data, thresh = 0.000000000000001)
+ploidy = length(peak) +1
+ploidy_result_list[[plots]] <- ploidy
+names(ploidy_result_list)[plots] <-names(ref_freq_list[plots])
+
+unlist_result <- unlist(ploidy_result_list)
+ 
+}
+write.csv(unlist_result, file = "/Users/pesta/Documents/noep.csv") #for saving if you wish
+```
+  

@@ -1,0 +1,156 @@
+---
+title: "GBS2ploidy"
+author: "Heather Tuttle"
+date: "7/16/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+Gather all of the AD files
+#read in AD file
+
+```{r}
+sample_data <- read.table(file = "/Users/pesta/Documents/FAFSA_potato/allployd_0815_AD.txt", sep = "\t", header = T, stringsAsFactors = F)
+```
+
+#Install rjags
+```{r}
+#install.packages("rjags")
+library(rjags)
+```
+
+
+
+#formatting the data
+```{r}
+library(stringr)
+SNPlist_alt <- c()
+SNPlist_ref <- c()
+count <- c(1:725)
+for (number in count){
+  grab <- sample_data[,number]
+  name <- as.character(colnames(sample_data)[number])
+  split <- as.data.frame(str_split(grab, ",", simplify = T))
+  split[split == 0] <- NA
+  select <- is.na(split$V1)
+  split[select, "V2"] <- split[select, "V1"]
+  select <- is.na(split$V2)
+  split[select, "V1"] <- split[select, "V2"]
+  refun <- as.integer(unlist(split$V1))
+  altun <- as.integer(unlist(split$V2))
+  ##Instead of creating a list -- put it in a matrix
+  SNPlist_ref[[name]]$reference <- refun
+  SNPlist_alt[[name]]$alternate <- altun
+  #df <- data.frame(matrix(unlist(l), nrow=length(l), byrow=T))
+ 
+}
+#array(as.numeric(unlist(mylist)), dim=c(14, 5, 10))
+
+alternatearray <- array(as.integer(unlist(SNPlist_alt[1:725])), dim = c(10841, 725))
+talternatearray <- t(alternatearray)
+refarray <- array(as.integer(unlist(SNPlist_ref[1:725])), dim = c(10841, 725))
+trefarray <- t(refarray)
+```
+
+#Needs to be in SNPs by individuals
+```{r}
+#Run when get to hotel -- changed 1 and 2 to integer instead of double, that could have been screwing things up
+final_list <- list()
+
+final_list[[1]] <- talternatearray
+final_list[[2]] <- trefarray
+#The list needs names as the 3rd element
+final_list[[3]] <- names(SNPlist_alt)
+
+ 
+
+```
+
+
+#Starting package GBS2ploidy
+
+```{r}
+#install.packages("gbs2ploidy")
+library(gbs2ploidy)
+```
+
+#started at 2PM
+#Estimating proportions
+```{r}
+
+####TAKES A LONG TIMEDO NOT RUN#######
+#props <-estprops(cov1 = t(final_list[[1]]) , cov2 = t(final_list[[2]]), mcmc.nchain = 2, mcmc.steps = 2000,mcmc.burnin = 500, mcmc.thin = 2)
+#save 
+#saveRDS(props, file = "props_all_gbs2ploidy.rds")
+props <- readRDS("props_all_gbs2ploidy.rds")
+```
+
+
+#estimating heterzygosity and depth of coverage
+```{r}
+hx<-apply(is.na(final_list[[1]]+final_list[[2]])==FALSE,1,mean)
+dx<-apply(final_list[[1]]+final_list[[2]],1,mean,na.rm=TRUE)
+```
+
+#I need traiiners for each ploidy level
+BAO 077 078 and 079 are 5x
+BAO 115 is 2x phureja
+All KBLV are 2X
+BAO015 is 3x juz
+BAO034 is 3x juz
+```{r}
+#Now that this is fiigured out, I will run with just 2 class, 3 class, and 4 class.
+#bui;d training matrix and indexes
+truep <- final_list[[3]]
+truep[1:725] <- NA
+truep[716:725] <- 4
+truep[124:126] <-5
+truep[c(160,401:420)] <- 2
+truep[c(65,83)] <-3
+trn <- c(65,83,124:126,160,401:420,716:725)
+```
+
+Now to get rid of those with NA
+```{r}
+#for all classes to grab names
+subsetNA <- which(is.na(truep))
+#get the names
+namesforclasses <- final_list[[3]][subsetNA]
+
+```
+
+
+#estimation of ploidy (we are expecting n=4 classes)
+```{r}
+#Make a vecotr of known ploidies, use NA for those that are unknown
+pl<-estploidy(alphas=props,het=hx,depth=dx,train=TRUE,pl=truep,set=trn, nclasses = 3 ,
+ids=namesforclasses,pcs=1:2)
+#MUst change filename every time if going to use for all ploidies
+#saveRDS(pl, file = "allployd_GBS2ploidy.rds")
+ploidy_est <- pl[["pp"]]
+write.csv(ploidy_est, file = "ploidy_estimation_234.csv")
+
+```
+
+
+#Lets find out what is estimated to be what
+#First thing to do is to pull the probability table
+for each id in [,1], find the max value [,2:5] and report column number + 1
+```{r}
+#format by making ids rownmaes
+rownames(ploidy_est) <- namesforclasses
+#ploidy_est <- ploidy_est[,-1]
+#find the max of each using apply function
+finalploidyest <- as.data.frame.numeric(colnames(ploidy_est)[apply(ploidy_est, 1, which.max)]) #finding the most likely ploidy
+colnames(finalploidyest) <- "ploidy"
+rownames(finalploidyest) <- namesforclasses
+#get some stats on how many of each
+write.csv(finalploidyest, file = "finalploidyest_xxx.csv")
+
+
+
+
+```
+
+
+

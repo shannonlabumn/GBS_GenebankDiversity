@@ -1,0 +1,250 @@
+---
+title: "ploidy determination analysis"
+author: "Heather Tuttle"
+date: "2023-08-29"
+output: html_document
+---
+
+#Analysis of ploidy estimation methods - How often did our different methods agree?
+
+```{r}
+#Load in the file that has the results from our ploidy determination analysis
+
+results <- read.csv("~/Documents/combined_results_for_both_methods.csv")
+```
+
+extract the results we need to examine
+```{r}
+results_methods <- results[,2:5]
+```
+
+In the count column, compare script.result GBS2p.234 .24 .2345
+How many 
+```{r}
+results_methods$num_mismatch <- apply(results_methods, 1, function (x) sum(table(x) == "1"))
+```
+
+
+How many had zero mismatches?
+210 had zero mismatches but that is defined by all values == to each other OR a tie between two methods
+ie 4,4,4,4
+vs 2,2,4,4
+```{r}
+zero.mismatch <- results_methods[results_methods$num_mismatch == "0",]
+```
+
+find the length of the unique value in one column, that will tell us how many were 'true' matches across methods
+```{r}
+sum(apply(zero.mismatch, 1, function(x) length(unique(x))==2))
+```
+
+```{r}
+zero.mismatch$unique.pair <- apply(zero.mismatch, 1, function (x) sum(unique(x) == "2"))
+```
+
+If == 1, total agreeance across methods
+
+If == 0, then pair
+```{r}
+sum(zero.mismatch$unique.pair == "0")
+```
+
+```{r}
+sum(zero.mismatch$unique.pair == "1")
+```
+
+
+How many had 3 matches (1 mismatch)?
+```{r}
+one.mismatch <- results_methods[results_methods$num_mismatch == "1",]
+```
+
+How many had 2 mismatches
+```{r}
+two.mismatch <- results_methods[results_methods$num_mismatch == "2",]
+```
+
+4?
+```{r}
+four.mismatch <- results_methods[results_methods$num_mismatch == "4",]
+```
+
+
+
+
+
+
+With passport data
+extract the results we need to examine
+
+```{r}
+#Load in the file that has the results from our ploidy determination analysis
+
+results <- read.csv("~/Documents/files_for_paper/Tuttle_et_al/Supplemental_2.csv")
+```
+
+```{r}
+results_methods <- results[,2:6]
+```
+
+In the count column, compare script.result GBS2p.234 .24 .2345 and passport data
+How many 
+```{r}
+results_methods$num_mismatch <- apply(results_methods[,], 1, function (x) sum(table(x) >= "0"))
+```
+
+
+How many had zero mismatches?
+210 had zero mismatches but that is defined by all values == to each other OR a tie between two methods
+ie 4,4,4,4
+vs 2,2,4,4
+```{r}
+zero.mismatch <- results_methods[results_methods$num_mismatch == "0",]
+```
+
+find the length of the unique value in one column, that will tell us how many were 'true' matches across methods
+```{r}
+sum(apply(zero.mismatch, 1, function(x) length(unique(x))==2))
+```
+
+```{r}
+zero.mismatch$unique.pair <- apply(zero.mismatch, 1, function (x) sum(unique(x) == "2"))
+```
+
+If == 1, total agreeance across methods
+
+If == 0, then pair
+```{r}
+sum(zero.mismatch$unique.pair == "0")
+```
+
+```{r}
+sum(zero.mismatch$unique.pair == "1")
+```
+
+
+How many had 3 matches (1 mismatch)?
+```{r}
+one.mismatch <- results_methods[results_methods$num_mismatch == "1",]
+```
+
+How many had 2 mismatches
+```{r}
+two.mismatch <- results_methods[results_methods$num_mismatch == "2",]
+```
+
+4?
+```{r}
+four.mismatch <- results_methods[results_methods$num_mismatch == "4",]
+```
+
+
+
+
+
+Looking for which analysis was better
+```{r}
+#Load in the file that has the results from our ploidy determination analysis
+
+results <- read.csv("~/Documents/files_for_paper/Tuttle_et_al/Supplemental_2.csv")
+```
+
+extract the results we need to examine
+```{r}
+results_methods <- results[,1:6]
+```
+
+Going to need the metadata for the analysis
+```{r}
+filt_ploidycalls <- read.csv("/Users/pesta/Documents/ploidycall_filt_for_analysis_LS_1ploidycall_filt_for_analysis_LS_1.csv")
+```
+
+I need the metadata with updated PIs and not the BAO sample names 
+copy the second row to new row to be manipulated
+```{r}
+filt_ploidycalls$X <- filt_ploidycalls$full
+```
+
+
+```{r}
+filt_ploidycalls$X <- stringr::str_extract(filt_ploidycalls$X, "[^_]*_[^_]*")
+```
+
+write to a file and fix in excel, then read back in to merge on the X column 
+```{r}
+write.csv(filt_ploidycalls,"~/Documents/filt_ploidycalls_intermediate.csv", quote = F, row.names = )
+```
+
+```{r}
+replaced <- read.csv("~/Documents/filt_ploidycalls_intermediate.csv")
+```
+
+```{r}
+X <- replaced$X
+```
+
+```{r}
+Y <- results_methods$Id
+```
+
+These are the accessions that were dropped because they did not fulfill threholds
+```{r}
+Id_filt <- Y[!Y %in% X]
+```
+
+extract these rows from result_methods
+```{r}
+not_used_ploidy_results <- results_methods[!results_methods$Id %in% X,]
+```
+
+Moving on to see which method was better at determining ploidy
+
+Used ploidy results
+```{r}
+used_ploidy_results <- results_methods[results_methods$Id %in% X,]
+```
+
+Then we need to see which ones agreed with script verus passport
+```{r}
+agree_w_script <- used_ploidy_results[used_ploidy_results$Script.result == used_ploidy_results$Passport.ploidy,]
+```
+
+```{r}
+agree_across_methods <- used_ploidy_results[used_ploidy_results$Script.result == used_ploidy_results$Passport.ploidy & used_ploidy_results$Script.result == used_ploidy_results$GBS2p.234. & used_ploidy_results$Script.result == used_ploidy_results$GBS2p.2345. & used_ploidy_results$Script.result == used_ploidy_results$GBS2p.24.,]
+```
+
+Perhaps from there we can assume that the rest of them agreed with GBS2ploidy?
+
+```{r}
+agree_w_gbs2ploidy <- used_ploidy_results[used_ploidy_results$GBS2p.234. == used_ploidy_results$Passport.ploidy |used_ploidy_results$GBS2p.2345. == used_ploidy_results$Passport.ploidy | used_ploidy_results$GBS2p.2345. == used_ploidy_results$Passport.ploidy,]
+```
+
+write csv to find those that tied
+
+```{r}
+write.csv(agree_w_gbs2ploidy,"~/Documents/agree_w_gbs2ploidy.csv", quote = F, row.names = F)
+```
+
+see which ones are in common betwween those that agree with gbs2ploidy and those that agree with script
+```{r}
+not_tied <- agree_w_gbs2ploidy[!agree_w_gbs2ploidy$Id %in% agree_w_script$Id,]
+```
+written to csv 'tied.csv'
+
+```{r}
+
+not_tied2 <- agree_w_script[agree_w_script$Id %in% agree_w_gbs2ploidy$Id,]
+```
+
+
+```{r}
+tied2 <- agree_w_script[!agree_w_script$Id %in% agree_w_gbs2ploidy$Id,]
+```
+
+remove those that have a tie
+```{r}
+tie_rmv <- tied2[tied2$Script.result == tied2$Passport.ploidy & tied2$GBS2p.234. == tied2$Passport.ploidy & !tied2$GBS2p.2345. == tied2$Passport.ploidy & tied2$GBS2p.24. == tied2$Passport.ploidy,]
+```
+
+
+
