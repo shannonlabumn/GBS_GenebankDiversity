@@ -1,0 +1,241 @@
+---
+title: "tetraploid polyrad analysis"
+author: "Heather Tuttle"
+date: "2023-11-27"
+output: html_document
+---
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("VariantAnnotation")
+library(VariantAnnotation)
+```
+
+
+```{r}
+library(VariantAnnotation)
+library(polyRAD)
+library(Rsamtools)
+library(pcaMethods)
+#install.packages("qqman")
+library(qqman)
+library(ggtree)
+```
+
+
+```{r}
+gvcf <- ("~/Documents/new_tetraploids/filtered_tetraploid_variants.recode.vcf")
+mybgvcf <- bgzip(gvcf)
+indexTabix(mybgvcf, format = "vcf")
+```
+#initial filtering of file
+```{r}
+Rdat <- VCF2RADdata(mybgvcf, phaseSNPs = F, expectedAlleles = 400000, expectedLoci = 500000, min.ind.with.minor.allele = 2,min.ind.with.reads = 109 , refgenome = "/Users/pesta/Documents/potato_dm_v404_all_pm_un.fasta",taxaPloidy = 4)
+```
+
+
+```{r}
+myhindhe <- HindHe(Rdat)
+myhindheByLoc <- colMeans(myhindhe, na.rm = TRUE)
+hist(myhindheByLoc, col = "lightgrey",
+     xlab = "Hind/He", main = "Histogram of Hind/He by locus",breaks = 50)
+abline(v = 0.5, col = "blue", lwd = 2)
+# If we are expecting diploid segregation, all markers should show a Hind/HE value of 0.5 or less.  (0.75 or  less for tetraploids)
+```
+
+#cutoff of 0.75 for tetraploids
+```{r}
+Rdat<- AddAlleleFreqHWE(Rdat)
+theseloci <- GetLoci(Rdat)[Rdat$alleles2loc[Rdat$alleleFreq >= 0.05 & Rdat$alleleFreq < 0.75]]
+theseloci <- unique(theseloci)
+#jpeg(filename = "HindHe.jpeg")
+hist(myhindheByLoc[theseloci], col = "lightgrey",
+     xlab = "Hind/He", main = "Histogram of Hind/He by locus, MAF >= 0.05", breaks = 100)
+abline(v = 0.75, col = "blue", lwd = 2)
+
+```
+
+
+```{r}
+
+keeploci <- names(myhindheByLoc)[myhindheByLoc < 0.75] #Keeping loci less than 0.75
+mydata<- SubsetByLocus(Rdat, keeploci)
+```
+
+#To impute using simulated population structure:
+```{r}
+mydata_popstruct <- IteratePopStruct(mydata)
+```
+
+histogram
+```{r}
+hist(mydataHWE$alleleFreq, breaks = 20, col = "lightgrey")
+```
+
+```{r}
+RdatProbGen <- GetProbableGenotypes(mydata_popstruct)
+tetraploid_imput_gen <- RdatProbGen[["genotypes"]]
+t_tetraploid_imput_gen <- t(tetraploid_imput_gen)
+
+write.csv(tetraploid_imput_gen, file = "~/Documents/sandbox/tetraploid/tetra_NAIVE_geno_7723.csv") #geno file to be used to add population names to structure file
+
+```
+
+
+
+```{r}
+
+imput_gen <- read.csv("~/Documents/tetraploid/tetra_geno_7723.csv")
+```
+
+
+#For the Naive method only (we will use this method when estimating population structure)
+```{r}
+Rdat_naive <- AddGenotypePriorProb_Even(mydata)
+Rdat_Naive <- AddGenotypeLikelihood(Rdat_Naive)
+Rdat_Naive <- AddPloidyChiSq(Rdat_Naive)
+```
+
+
+```{r}
+RdatProbGen <- GetProbableGenotypes(Rdat_Naive)
+tetraploid_imput_gen <- RdatProbGen[["genotypes"]]
+t_tetraploid_imput_gen <- t(tetraploid_imput_gen)
+
+#write.csv(tetraploid_imput_gen, file = "~/Documents/tetraploid/tetra_NAIVE_geno_7723.csv") #Naive genotypes
+
+```
+
+
+#Read in imputed geotypes of choice (Naive or not). 
+```{r}
+
+imput_gen <- read.csv("~/Documents/tetraploid/tetra_geno_7723.csv")
+```
+
+```{r}
+#finding those that are == 4x and 2x from the passport data
+#The next steps are to add population names for the final file
+ploidycalls <- read.csv("~/Documents/ploidycall_filt_for_analysis.csv")
+tet <- as.data.frame(ploidycalls[ploidycalls$Bamberg == "4",])
+dip <- as.data.frame(ploidycalls[ploidycalls$Bamberg == "2",])
+#combine the datasets
+tet_dip <- rbind(tet,dip)
+
+```
+#Make the extensions match
+```{r}
+tetdip1 <- gsub("cutadapt_bowtie2_sort_rg_marked.bam","cutadapt_bowtie_sort_rg_marked.bam", tet_dip$full)
+```
+
+```{r}
+tetdip2 <- cbind(tetdip1, tet_dip)
+tetdip3 <- tetdip2[,-c(3)]
+colnames(tetdip3)[1] <- "full"
+```
+
+
+remove rows that do not contain sample name in names vector (to find tetraploid inds)
+```{r}
+tet_dip_filt <- tetdip3[tetdip3$full %in% names,]
+```
+
+
+Using the names file from the imputed genotypes in polyrad to sort on the other df
+```{r}
+Names <- as.data.frame(imput_gen[1])
+
+```
+#putting everything in correct order
+```{r}
+dipt_tet.complete <- tet_dip_filt[order(match(tet_dip_filt[,1], Names$X)),]
+rownames(dipt_tet.complete) <- NULL
+```
+
+#extract columns 3-8
+```{r}
+species_ploidy <- dipt_tet.complete[,3:8]
+```
+
+#fix the population abbreviations
+```{r}
+species_ploidy$species[species_ploidy$species == "tbr adg"] <- "tbradg"
+species_ploidy$species[species_ploidy$species == "tbr tbr"] <- "tbr"
+species_ploidy$species[species_ploidy$species == "tbr  tbr"] <- "tbr"
+species_ploidy$species[species_ploidy$species == "tbr  adg"] <- "tbradg"
+```
+
+#Assigning numbers to populations and removing anything that is genetic material
+```{r}
+populations <- ifelse(species_ploidy$species == "tbr" & species_ploidy$status != "genetic material", "1", 
+                      ifelse(species_ploidy$species == "tbradg" & species_ploidy$status != "genetic material", "2", "3"
+                                ))
+```
+
+#Binding together individuals that are 4x and not genetic material
+```{r}
+populations.df <- as.data.frame(populations) #make df
+populations.assigned <- cbind(species_ploidy, populations.df)
+```
+
+
+#to make continent column uniform
+```{r}
+populations.assigned$continent[populations.assigned$continent == "North American"] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "North American "] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "North America "] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "North America"] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "SouthAmerican"] <- "SouthAmerica"
+populations.assigned$continent[populations.assigned$continent == "South American"] <- "SouthAmerica"
+populations.assigned$continent[populations.assigned$continent == "South American "] <- "SouthAmerica"
+populations.assigned$continent[populations.assigned$continent == "asia"] <- "Asia"
+populations.assigned$continent[populations.assigned$continent == "europe"] <- "Europe"
+populations.assigned$continent[populations.assigned$continent == "africa"] <- "Africa"
+populations.assigned$continent[populations.assigned$continent == "australia"] <- "Australia"
+populations.assigned$region[populations.assigned$region == "ecudor"] <- "ecuador"
+populations.assigned$region[populations.assigned$region == "Chile"] <- "chile"
+
+```
+
+#Assigning meaningful populations (numbers) for export to GenoDive
+```{r}
+populations.8 <- ifelse(populations.assigned$region == "US" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "1", 
+                    ifelse(populations.assigned$region == "canada" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "1", 
+                     ifelse(populations.assigned$region == "peru" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "2",   
+                      ifelse(populations.assigned$region == "bolivia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "3", 
+                       ifelse(populations.assigned$region == "argentina" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "3", 
+                        ifelse(populations.assigned$region == "uruguay" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "3", 
+                        ifelse(populations.assigned$region == "chile" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "4", 
+                        ifelse(populations.assigned$region == "mexico" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "5", 
+                        ifelse(populations.assigned$region == "guatemala" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "5", 
+                        ifelse(populations.assigned$continent == "Europe" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "6", 
+                        ifelse(populations.assigned$region == "brazil" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "7", 
+                        ifelse(populations.assigned$region == "ecuador" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "7", 
+                        ifelse(populations.assigned$region == "colombia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "7", 
+                          ifelse(populations.assigned$region == "peru" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "8", 
+                           ifelse(populations.assigned$region == "ecuador" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "9",
+                                ifelse(populations.assigned$region == "bolivia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "10",
+                                ifelse(populations.assigned$region == "argentina" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "11",
+                                ifelse(populations.assigned$region == "chile" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "11",
+                                ifelse(populations.assigned$region == "colombia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "12",
+                                  ifelse(populations.assigned$region == "venezuela" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "12", "13"))))))))))))))))))))
+                        
+                        
+                        
+                 
+```
+
+
+#bind species ploidy and populations together
+```{r}
+structure_format.file <- cbind(populations.8, species_ploidy)
+rownames(structure_format.file) <- NULL
+##Taking out clones, ploidy and species name
+p <- as.data.frame(structure_format.file[,1]) #population value
+colnames(p) <- NULL
+```
+
+```{r}
+Export_Structure(mydata_popstruct, file = "~/Documents/tetraploid/tetra_original_structure_7723", extraCols = p)
+```

@@ -1,0 +1,343 @@
+---
+title: "combined panel polyrad imputation"
+author: "Heather Tuttle"
+date: "2023-11-27"
+output: html_document
+---
+
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("VariantAnnotation")
+library(VariantAnnotation)
+```
+
+
+```{r}
+library(VariantAnnotation)
+library(polyRAD)
+library(Rsamtools)
+library(pcaMethods)
+#install.packages("qqman")
+library(qqman)
+library(ggtree)
+```
+
+LOAD in the ploidies for vcf2radata
+```{r}
+b <- read.csv("ploidy_for_vcf2raddata", header = F)
+c <- as.integer(b$V1)
+```
+
+#Read in vcf file for the combined panel
+```{r}
+gvcf <- ("filtered_diptet_variants.recode.vcf")
+mybgvcf <- bgzip(gvcf)
+indexTabix(mybgvcf, format = "vcf")
+```
+#initial vcf filtering 
+```{r}
+Rdat <- VCF2RADdata(mybgvcf, expectedAlleles = 4000000, expectedLoci = 5000000, min.ind.with.reads = 109, min.ind.with.minor.allele = 2, refgenome = "/Users/pesta/Documents/potato_dm_v404_all_pm_un.fasta", phaseSNPs = F, taxaPloidy = c)
+```
+#splitting up loci into diploid and tetraploid to filter seprateley
+#loci with hind/he over 0.75 (tetraploid)
+```{r}
+myhindhe <- HindHe(Rdat)
+myhindheByLoc <- colMeans(myhindhe, na.rm = TRUE)
+hist(myhindheByLoc, col = "lightgrey",
+     xlab = "Hind/He", main = "Histogram of Hind/He by locus",breaks = 50)
+abline(v = 0.75, col = "blue", lwd = 2)
+```
+
+over 0.5 (diploid)
+```{r}
+Rdat <- AddAlleleFreqHWE(Rdat)
+theseloci <- GetLoci(Rdat)[Rdat$alleles2loc[Rdat$alleleFreq >= 0.02 & Rdat$alleleFreq < 0.5]]
+theseloci <- unique(theseloci)
+hist(myhindheByLoc[theseloci], col = "lightgrey", breaks = 50,
+     xlab = "Hind/He", main = "Histogram of Hind/He by locus, MAF >= 0.02")
+abline(v = 0.5, col = "blue", lwd = 2)
+```
+
+Looking at Hind/He after splitting out by ploidy level
+2x
+```{r}
+alfreq2x <- colMeans(Rdat$depthRatio[Rdat$taxaPloidy == 2,], na.rm = TRUE)
+theseloci2x <- GetLoci(Rdat)[Rdat$alleles2loc[alfreq2x >= 0.02 & alfreq2x < 0.5]]
+theseloci2x <- unique(theseloci2x)
+
+hh2x_05 <- colMeans(myhindhe[Rdat$taxaPloidy == 2, theseloci2x], na.rm = TRUE)
+
+hist(hh2x_05, breaks = 20, xlab = "Hind/He", main = "Hind/He in diploids, MAF >= 0.02")
+```
+
+4x
+```{r}
+alfreq4x <- colMeans(Rdat$depthRatio[Rdat$taxaPloidy == 4,], na.rm = TRUE)
+theseloci4x <- GetLoci(Rdat)[Rdat$alleles2loc[alfreq4x >= 0.02 & alfreq4x < 0.75]]
+theseloci4x <- unique(theseloci4x)
+
+hh4x_05 <- colMeans(myhindhe[Rdat$taxaPloidy == 4, theseloci4x], na.rm = TRUE)
+
+hist(hh4x_05, breaks = 50, xlab = "Hind/He", main = "Hind/He in tetraploids, MAF >= 0.02")
+```
+
+
+
+To investeigate individuals based on inheritence mode
+```{r}
+TotDepthT <- rowSums(Rdat$locDepth)
+myHindHeByInd <- rowMeans(myhindhe, na.rm = T)
+```
+
+Diploids are expected to be around 0.5 and tetraploids around 0.75. Since there is some population structure, most individuals show a lower value per clark.
+```{r}
+#png(filename = "hind_readdepth_ploidy.png", width = 5, height = 5, units = "in", res = 300)
+ggplot(data.frame(Depth = TotDepthT, HindHe = myHindHeByInd,
+                  Ploidy = c),
+  mapping = aes(x = Depth, y = HindHe, color = factor(Ploidy))) +
+  geom_point() +
+  scale_x_log10() +
+  facet_wrap(~ Ploidy) +
+  geom_hline(data = data.frame(Ploidy = c("2","4"),
+                               ExpHindHe = c(1/2, 3/4)),
+             mapping = aes(yintercept = ExpHindHe), lty = 2) +
+  labs(x = "Read Depth", y = "Hind/He", color = "Ploidy")
+#dev.off()
+```
+
+Splitting out diploids from tetraploids
+```{r}
+myHindHe2x <- myhindhe[c == "2",]
+myHindHe4x <- myhindhe[c == "4",]
+```
+
+Diploid markers Hind/He
+```{r}
+myHindHeByLoc2x <- colMeans(myHindHe2x, na.rm = TRUE)
+hist(myHindHeByLoc2x, breaks = 50, xlab = "Hind/He",
+     main = "Distribution of Hind/He among loci in diploids",
+     col = "lightgrey")
+abline(v = 0.5, col = "blue", lwd = 2)
+
+```
+
+```{r}
+myHindHeByLoc4x <- colMeans(myHindHe2x, na.rm = TRUE)
+hist(myHindHeByLoc4x, breaks = 50, xlab = "Hind/He",
+     main = "Distribution of Hind/He among loci in diploids",
+     col = "lightgrey")
+abline(v = 0.75, col = "blue", lwd = 2)
+
+```
+
+Only keeping good loci (less than 0.5 for diploids, less than 0.75 for tetraploids)
+
+```{r}
+goodLoci <- colnames(myhindhe)[myHindHeByLoc2x < 0.5 & myHindHeByLoc4x < 0.75]
+length(goodLoci) 
+Rdata <- SubsetByLocus(Rdat, goodLoci)
+```
+
+##NAIVE MODEL###
+```{r}
+mydataNaive <- AddGenotypePriorProb_Even(Rdata)
+mydataNaive <- AddGenotypeLikelihood(mydataNaive)
+mydataNaive <- AddPloidyChiSq(mydataNaive)
+```
+
+Export csv file with imputed genotypes to be used to add population names
+```{r}
+RdatProbGen <- GetProbableGenotypes(mydataNaive)
+diploid_imput_gen <- RdatProbGen[["genotypes"]]
+write.csv(diploid_imput_gen, file = "naive_geno.csv")
+
+```
+
+##Simulated population structure##
+```{r}
+RdatPopStruct <- IteratePopStruct(Rdata)
+```
+
+```{r}
+hist(RdatPopStruct$alleleFreq, breaks = 20, col = "lightgrey")
+```
+
+#Make csv to attach to population values for export to genoDive
+```{r}
+RdatProbGen <- GetProbableGenotypes(RdatPopStruct)
+imput_gen <- RdatProbGen[["genotypes"]]
+write.csv(imput_gen, file = "geno_combined_7723.csv", quote = F) #combined genotype file
+```
+
+
+To generate structure file to be used with genoDive
+Use either one of the csv files containing imputed genotypes of choice
+
+```{r}
+imput_gen <- read.csv("geno_combined_7723.csv") #generated above
+```
+
+
+#from imput gen, get the rownames and use those to merge with the metadata to get the accompanying ploidy of each individual to then filter markers.
+```{r}
+names <- imput_gen[,1]
+```
+
+#in repository mainbranch on github
+```{r}
+ploidycalls <- read.csv("ploidycall_filt_for_analysis.csv")
+#remove column 6
+#ploidycalls <- ploidycalls[,-6]
+```
+
+
+```{r}
+
+tet <- as.data.frame(ploidycalls[ploidycalls$Bamberg == "4",]) #splitting the data into dip/tet
+dip <- as.data.frame(ploidycalls[ploidycalls$Bamberg == "2",])
+#combine the datasets
+tet_dip <- rbind(tet,dip)
+
+```
+
+#change the extensions so they can be matched
+```{r}
+tetdip1 <- gsub("cutadapt_bowtie2_sort_rg_marked.bam","cutadapt_bowtie_sort_rg_marked.bam", tet_dip$full)
+```
+
+```{r}
+tetdip2 <- cbind(tetdip1, tet_dip)
+tetdip3 <- tetdip2[,-c(3)]
+colnames(tetdip3)[1] <- "full"
+```
+
+
+remove rows that do not contain sample name in names vector
+```{r}
+tet_dip_filt <- tetdip3[tetdip3$full %in% names,]
+```
+
+
+Using the names file from the imputed genotypes in polyrad to sort on the other df
+```{r}
+Names <- as.data.frame(imput_gen[1])
+```
+
+
+```{r}
+dipt_tet.complete <- tet_dip_filt[order(match(tet_dip_filt[,1], Names$X)),]
+rownames(dipt_tet.complete) <- NULL
+```
+
+
+#write to a file to be used in the future. taxa ploidy needs to be passed to VCF2Raddata
+```{r}
+a <- dipt_tet.complete[3] #creating map file to read in ploidies for vcf2raddata
+colnames(a) <- NULL
+#write.csv(a, file = "ploidy_for_vcf2raddata", quote = F, row.names = F)
+```
+
+
+extract columns 3-8
+```{r}
+species_ploidy <- dipt_tet.complete[,3:8]
+```
+
+
+#Correct population assignments 
+```{r}
+species_ploidy$species[species_ploidy$species == "juzepczukii"] <- "juz"
+species_ploidy$species[species_ploidy$species == "tbr adg"] <- "tbradg"
+species_ploidy$species[species_ploidy$species == "tbr tbr"] <- "tbr"
+species_ploidy$species[species_ploidy$species == "tbr  tbr"] <- "tbr"
+species_ploidy$species[species_ploidy$species == "tbr  adg"] <- "tbradg"
+```
+
+removing anything with genetic material and assigning a population value
+```{r}
+populations <- ifelse(species_ploidy$species == "tbr" & species_ploidy$status != "genetic material", "1", 
+                      ifelse(species_ploidy$species == "tbradg" & species_ploidy$status != "genetic material", "2",
+                                ifelse(species_ploidy$species == "stn"& species_ploidy$status != "genetic material", "3",
+                                    ifelse(species_ploidy$species == "juz"& species_ploidy$status != "genetic material", "4",
+                                         ifelse(species_ploidy$species == "phu"& species_ploidy$status != "genetic material", "5",
+                                             ifelse(species_ploidy$species =="ber","8",
+                                                ifelse(species_ploidy$species == "brc", "8",
+                                                    ifelse(species_ploidy$species == "blv"& species_ploidy$status != "genetic material", "6",
+                                                          ifelse(species_ploidy$species == "ajh", "8",
+                                    "8")))))))))
+```
+
+```{r}
+populations.df <- as.data.frame(populations)
+populations.assigned <- cbind(species_ploidy, populations.df)
+```
+
+#to make continent column uniform
+```{r}
+populations.assigned$continent[populations.assigned$continent == "North American"] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "North American "] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "North America "] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "North America"] <- "NorthAmerica"
+populations.assigned$continent[populations.assigned$continent == "SouthAmerican"] <- "SouthAmerica"
+populations.assigned$continent[populations.assigned$continent == "South American"] <- "SouthAmerica"
+populations.assigned$continent[populations.assigned$continent == "South American "] <- "SouthAmerica"
+populations.assigned$continent[populations.assigned$continent == "asia"] <- "Asia"
+populations.assigned$continent[populations.assigned$continent == "europe"] <- "Europe"
+populations.assigned$continent[populations.assigned$continent == "africa"] <- "Africa"
+populations.assigned$continent[populations.assigned$continent == "australia"] <- "Australia"
+populations.assigned$region[populations.assigned$region == "ecudor"] <- "ecuador"
+populations.assigned$region[populations.assigned$region == "Chile"] <- "chile"
+
+```
+
+Grouping into meaningful populations (Spooner)
+```{r}
+populations.8 <- ifelse(populations.assigned$region == "US" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "1", 
+                    ifelse(populations.assigned$region == "canada" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "1", 
+                     ifelse(populations.assigned$region == "peru" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "2",   
+                      ifelse(populations.assigned$region == "bolivia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "3", 
+                       ifelse(populations.assigned$region == "argentina" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "3", 
+                        ifelse(populations.assigned$region == "uruguay" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "3", 
+                        ifelse(populations.assigned$region == "chile" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "4", 
+                        ifelse(populations.assigned$region == "mexico" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "5", 
+                        ifelse(populations.assigned$region == "guatemala" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "5", 
+                        ifelse(populations.assigned$continent == "Europe" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "6", 
+                        ifelse(populations.assigned$region == "brazil" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "7", 
+                        ifelse(populations.assigned$region == "ecuador" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "7", 
+                        ifelse(populations.assigned$region == "colombia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbr", "7", 
+                          ifelse(populations.assigned$region == "peru" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "8", 
+                           ifelse(populations.assigned$region == "ecuador" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "9",
+                                ifelse(populations.assigned$region == "bolivia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "10",
+                                ifelse(populations.assigned$region == "argentina" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "11",
+                                ifelse(populations.assigned$region == "chile" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "11",
+                                ifelse(populations.assigned$region == "colombia" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "12",
+                                  ifelse(populations.assigned$region == "venezuela" & populations.assigned$status != "genetic material"& populations.assigned$species == "tbradg", "12",
+                                  ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "blv", "13",
+                                ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "juz", "14",
+                                  ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "phu", "15",
+                                  ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "stn", "16",
+                                          ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "ber", "17",
+                                                  ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "brc", "18",
+                                                          ifelse(populations.assigned$status != "genetic material"& populations.assigned$species == "ajh", "19","20")))))))))))))))))))))))))))
+                        
+                        
+                        
+                 
+```
+
+bind species ploidy and populations together
+```{r}
+structure_format.file <- cbind(populations.8, species_ploidy)
+rownames(structure_format.file) <- NULL
+p <- as.data.frame(structure_format.file[,1])
+colnames(p) <- NULL
+```
+
+```{r}
+Export_Structure(RdatPopStruct, file = "combined_original_structure_7723", extraCols = p)
+```
+
+combined_NAIVE_original_structure_7723.zip
+combined_original_structure_7723.zip
